@@ -1,0 +1,83 @@
+*{
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ebebeb;
+}
+.seccion{
+    font-size: 24px;
+    font-weight: bolder;
+}
+.galeria{
+    align-items: center;
+   
+}
+.imagenPrincipal img {
+    width: 100%;
+    height: auto; 
+    align-items: center;
+}
+.imageneSecundaria img {
+    width: 100%;
+    height: auto;
+    align-items: center;
+  }
+
+.imagenPrincipal{
+    width: 90%;
+    align-content: center;
+}
+
+.imageneSecundaria{
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.cuotas, .stock{
+    font-size: 14px;
+    color: #009ADE;
+}
+
+.titulo{
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.cajaCantidad{
+    display: flex;
+}
+
+.cantidad{
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+
+}
+.boton{
+    background-color: #14253A;
+    width: 200px;
+    height: 40px;
+    color: white;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    border-radius: 10px;
+    vertical-align: middle;
+    line-height: 30px;
+    font-weight: bold;
+
+}
+
+.tarjetas{
+    position:relative;
+    display: flex;
+    margin: auto;
+    width: 65%;
+    margin-top: 20px;
+}
