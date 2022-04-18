@@ -15,7 +15,7 @@ app.get('/',(req,res)=>{
     res.sendFile(__dirname+'/views/home.html')
 })
 
-app.get('/product-detail', function(req,res){
+app.get('/productDetail', function(req,res){
     res.sendFile(path.resolve(__dirname, './views/productDetail.html'));
 
 });

@@ -18,6 +18,9 @@
       flex-direction: row;
       justify-content: start;
   }
+  @media screen and (min-width: 1175px) {
+
+  }
 .footer--format{
 position: relative;
 bottom: 0;
@@ -93,6 +96,18 @@ flex-direction: row;
 
     color:blue
 }
+@media screen and (min-width: 1175px) {
+    .footer--distribution{
+        margin-top: 15px;
+        margin-bottom: 15px;
+              gap:14px;
+            display:flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+            font-weight:200;
+            }}
+            @media screen and (max-width: 1175px) {
   .footer--distribution{
 margin-top: 15px;
 margin-bottom: 15px;
@@ -101,7 +116,7 @@ margin-bottom: 15px;
     align-items: center;
     flex-direction: column;
     font-weight:200;
-  }
+  }}
   .footer--contactanos{
       font-size: 18px;
       font-style: normal;
