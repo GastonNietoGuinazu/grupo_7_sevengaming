@@ -1,30 +1,72 @@
 *{
-    margin: 5px;
-    padding: 5px;
+    margin: 0x;
+    padding: 0px;
     box-sizing: border-box;
 }
 
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #ebebeb;
+    margin: auto;
 }
-.seccion{
-    font-size: 24px;
-    font-weight: bolder;
+
+header {
+    background-color: #121a22;
+    color: white;
 }
-.galeria{
-    align-items: center;
+.barra-superior {
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
    
 }
+.menu {
+    width: 10%;
+    flex-wrap: 10%;
+}
+.logo {
+    width: 60%;
+    flex-wrap: 60%;
+}
+.primer-icono {
+    width: 10%;
+    flex-wrap: 10%;
+}
+.segundo-icono {
+    width: 10%;
+    flex-wrap: 10%;
+}
+.tercer-icono {
+    width: 10%;
+    flex-wrap: 10%;
+}
+
+.seccion{
+    display: block;
+    text-align: left;
+    font-size: 24px;
+    font-weight: bolder;
+    margin-left: auto;
+    margin-right: auto;
+}
+.imagenes{
+    margin: auto;
+    width: 110%;
+    margin-top: 30px;
+    
+}
+.galeria-imagenes{
+    margin: auto;
+    width: 90%;
+   }
+
 .imagenPrincipal img {
     width: 100%;
-    height: auto; 
-    align-items: center;
+
 }
-.imageneSecundaria img {
+.imagenSecundaria img {
     width: 100%;
-    height: auto;
-    align-items: center;
+    margin: 5px;
   }
 
 .imagenPrincipal{
@@ -32,11 +74,27 @@ body {
     align-content: center;
 }
 
-.imageneSecundaria{
+.imagenSecundaria{
     display: flex;
     width: 90%;
-    flex-direction: row;
     justify-content: space-around;
+}
+.categoria{
+    margin: auto;
+    margin-top: 30px;
+}
+
+.titulo{
+    margin-top: 10px;
+}
+.descripcion{
+    width: 90%;
+    margin: auto;
+    text-align: left;
+}
+
+.descripcion ul{
+    margin-left: 15px;
 }
 
 .cuotas, .stock{
@@ -54,11 +112,15 @@ body {
 }
 
 .cantidad{
-    display: flex;
     font-weight: bold;
+    margin: 20px;
     align-items: center;
-
 }
+.form{
+    display: flex;
+    align-items: center;
+    height: auto;
+}   
 .boton{
     background-color: #14253A;
     width: 200px;
@@ -69,7 +131,7 @@ body {
     text-align: center;
     border-radius: 10px;
     vertical-align: middle;
-    line-height: 30px;
+    line-height: 35px;
     font-weight: bold;
 
 }
@@ -78,11 +140,34 @@ body {
     position:relative;
     display: flex;
     margin: auto;
-    width: 65%;
+    width: 30%;
     margin-top: 20px;
 }
 
 .footer--content{
+    position:relative;
+
+}
+.data{
+  gap: 3px;
+  display: flex;
+  flex-direction: row;
+}
+.data i{
+
+  color:blue
+}
+
+.footer--format{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    color:var(--cuartary-color);
+    background-color: var(--main-color);
+      }
+
+      
+  .footer--content{
     position:relative;
 
 }
@@ -110,7 +195,4 @@ margin-bottom: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-.direccion{
-    font-size: 11px;
 }
