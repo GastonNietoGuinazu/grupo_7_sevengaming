@@ -1,0 +1,138 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/*Header*/
+
+header {
+    background-color: #121a22;
+    color: white;
+}
+.barra-superior {
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+.menu {
+    width: 10%;
+    flex-wrap: 10%;
+}
+.logo {
+    width: 60%;
+    flex-wrap: 60%;
+}
+.primer-icono {
+    width: 10%;
+    flex-wrap: 10%;
+}
+.segundo-icono {
+    width: 10%;
+    flex-wrap: 10%;
+}
+.tercer-icono {
+    width: 10%;
+    flex-wrap: 10%;
+}
+
+/*Main*/
+
+.titulo-1 {
+    margin: 1em;
+    margin-bottom: 0;
+}
+
+/*Cuadrado Superior*/
+
+.superior {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 2em;
+    padding-bottom: 2em;
+    border-bottom: solid 2px #121a22;
+}
+.item-1 {
+    display: flex;
+    justify-content: flex-start;
+}
+.item-2 {
+    display: flex;
+    justify-content: flex-start;
+}
+.item-3{
+    display: flex;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+}
+.item-4 {
+    display: flex;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+}
+
+/*Cuadrado Intermedio*/
+
+.intermedio {
+    display: flex;
+    margin: 2em;
+}
+.cuadrado {
+    background-color: aqua;
+    width: 4em;
+    height: 4em;
+}
+.descripción {
+    text-align: center;
+}
+
+/*Cuadrado Inferior*/
+
+.inferior{
+    margin: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.item {
+    width: 30%;
+}
+
+/*Botones*/
+
+.botones {
+    margin: 2em;
+    color: blue;
+}
+
+/*Login*/
+
+.titulo-2 {
+    padding: 1em;
+}
+.login {
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.repo-contraseña {
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-bottom: 1em;
+}
+.iniciar-sesion {
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+}
+.login-3 {
+    display: flex;
+    justify-content: center;
+}
+.crear-cuenta {
+    color: blue;
+}

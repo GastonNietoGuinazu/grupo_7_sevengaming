@@ -81,3 +81,36 @@ body {
     width: 65%;
     margin-top: 20px;
 }
+
+.footer--content{
+    position:relative;
+
+}
+.data{
+  gap: 3px;
+  display: flex;
+  flex-direction: row;
+}
+.data i{
+
+  color:blue
+}
+.footer--distribution{
+margin-top: 15px;
+margin-bottom: 15px;
+    gap:14px;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  font-weight:200;
+}
+.footer--contactanos{
+    font-size: 18px;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.direccion{
+    font-size: 11px;
+}
