@@ -28,48 +28,8 @@
     ></script>
   </head>
   <body>
-    <header>
-      <div class="container">
-        <div class="navBar">
-          <div class="subNav1">
-            <div class="icon-menu">
-              <i
-              class="fas fa-bars"
-              style="color: white; width: 30px; height: 15px; cursor: pointer"
-              ></i>
-            </div>
-          </div>
-          <div class="subNav2">
-            <img class="logo" src="img/logo.svg" alt="logo" />
-          </div>
-          <div class="subNav3">
-            <i
-            class="far fa-user-circle"
-            style="
-              color: white;
-              margin-right: 10px;
-              width: 20px;
-              height: 20px;
-              cursor: pointer;
-              "
-          ></i>
-          <i
-          class="fas fa-search"
-          style="
-              color: white;
-              margin-right: 10px;
-              width: 20px;
-              height: 20px;
-              cursor: pointer;
-              "
-          ></i>
-          <i
-          class="fas fa-cart-plus"
-          style="color: white; width: 20px; height: 20px; cursor: pointer"
-          ></i>
-        </div>
-      </div>
-    </header>
+    <!-- Header -->
+    <%- include('partials/header') %>
       <section class="slider-container">
         <div class="imageContainer">
           <img class="img-carrusel" src="img/placeholder 1.png" alt="" />
@@ -142,31 +102,8 @@
           </div>
         </div>
       </section>
-      <footer class="footer">
-        <div class="title-contacto">
-          <span class="contacto">CONTACTANOS</span>
-        </div>
-        <div class="contact-container">
-          <span>Rinehart Road, Fort Lauderdale, FL 33301</span>
-          <span>594-92-5478 - contacto@sevengaming.com</span>
-        </div>
-        <div class="a-items">
-          <a href="">Home</a>
-          <a href="">Juegos</a>
-          <a href="">Libros & Arte</a>
-          <a href="">Pins</a>
-          <a href="">Ropa</a>
-          <a href="">Ofertas</a>
-          <a href="">Carrito</a>
-          <a href="">Mi cuenta</a>
-          <a href="">¿Quiénes somos?</a>
-        </div>
-        <div class="logos-redes-sociales">
-            <img src="img/facebook_mono.svg" alt="logo redes 3">
-            <img id="redes-sociales" src="img/twitter_mono.svg" alt="logo redes 2"> 
-            <img src="img/instagram_mono.svg" alt="logo redes">
-        </div>
-      </footer>
+      <!-- Footer -->
+      <%- include('partials/footer') %
     </div>
 
   </body>
