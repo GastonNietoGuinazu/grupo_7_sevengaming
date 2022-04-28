@@ -1,10 +1,7 @@
-//Requerimos express y lo ejecutamos para tener disponibles todos los metodos quee vamos a precisar
 const express=require('express');
 const app=express();
-
 const path=require("path")
-// importamos los distintos enrutadores
-const mainRouter=require('./routes/mainRouter')
+
 //similar a los recursos estaticos, es para evitar poner el path
 app.set('view',path.resolve(__dirname,'views'));
 //configuramos el motor de plantillas (EJS)
@@ -12,7 +9,15 @@ app.set('view engine','ejs')
 //Usamos los recursos estaticos
 app.use(express.static('public'));
 //usando los enrutadores importados
-app.use("/",mainRouter);
+
+const productsRouter = require("./routes/productsRouter.js")
+const usersRouter = require("./routes/usersRouter.js")
+const homeRouter = require("./routes/homeRouter.js")
+
+app.use("/productos", productsRouter);
+app.use("/usuarios", usersRouter);
+app.use("/", homeRouter);
+
 app.listen(3012,()=>{
     console.log('servidor corriendo en http://localhost:3012');
 });

@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>SevenGaming</title>
+    <title>Seven Gaming</title>
     <link href="/css/carrito-login.css" rel="stylesheet">
     <link href="/css/cuenta.css" rel="stylesheet">
     <link href="/css/home.css" rel="stylesheet">
@@ -16,51 +15,53 @@
 <body>
     <!-- Header -->
     <%- include('partials/header') %>
+        <main>
+            <section>
 
-    <main>
-        <section>
-
-            <div class="titulo-2"><h3>Iniciar Sesión</h3></div>
-
-            <article class="login">
-                <p>Email</p>
-                <div>
-                    <form action="" method="post">
-                        <input type="email" name="Email">
-                    </form>
+                <div class="titulo-2">
+                    <h3>Iniciar Sesión</h3>
                 </div>
-            </article>
 
-            <article class="login">
-                <p>Contraseña</p>
-                <div>
-                    <form action="" method="post">
-                        <input type="password" name="contraseña"> 
-                    </form>
-                </div>
-            </article>
+                <article class="login">
+                    <p>Email</p>
+                    <div>
+                        <form action="" method="post">
+                            <input type="email" name="Email">
+                        </form>
+                    </div>
+                </article>
 
-            <div class="repo-contraseña"><p>¿olvidaste tu contraseña?</p></div>
+                <article class="login">
+                    <p>Contraseña</p>
+                    <div>
+                        <form action="" method="post">
+                            <input type="password" name="contraseña">
+                        </form>
+                    </div>
+                </article>
 
-            <article class="iniciar-sesion">
-                <div>
-                    <form action="" method="">
-                        <button type="menu">Iniciar Sesión</button>
-                    </form>
+                <div class="repo-contraseña">
+                    <p>¿olvidaste tu contraseña?</p>
                 </div>
-            </article>
-            <article class="login-3">
-                <p>¿No tenes cuenta?</p>
-                <div class="crear-cuenta">
-                    <form action="" method="post">
-                        <label for=""><button type="submit"></button> Crear cuenta</label>
-                    </form>
-                </div>
-            </article>
-        </section>
-    </main>
-      <!-- Footer -->
-      <%- include('partials/footer') %>
+
+                <article class="iniciar-sesion">
+                    <div>
+                        <form action="" method="">
+                            <button type="menu">Iniciar Sesión</button>
+                        </form>
+                    </div>
+                </article>
+                <article class="login-3">
+                    <p>¿No tenes cuenta?</p>
+                    <div class="crear-cuenta">
+                        <form action="" method="post">
+                            <label for=""><button type="submit"></button> Crear cuenta</label>
+                        </form>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <!-- Footer -->
+        <%- include('partials/footer') %>
 </body>
-
 </html>
