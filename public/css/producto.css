@@ -171,6 +171,7 @@ header {
     width: 100%;
     color:var(--cuartary-color);
     background-color: var(--main-color);
+    border-top: solid black 1px;
       }
 
       
