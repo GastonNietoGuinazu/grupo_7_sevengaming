@@ -1,25 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    <link rel="stylesheet" href="/css/producto.css">
-    <link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet" href="/css/cuenta.css">
-    <link rel="stylesheet" href="/css/productList.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/producto.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link rel="stylesheet" href="/css/cuenta.css" />
+    <link rel="stylesheet" href="/css/productList.css" />
     <title>Product List</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Header -->
     <%- include('partials/header') %>
 
-    <article class="juegos">
+    <!---PRIMERA SECCIÓN-->
 
+    <article class="juegos">
+      <div class="titleContainer"><span class="tituloJuegos">Juegos</span></div>
+      <section class="gamesContainer">
+        <div class="juego1">
+          <img class="img-game" src="img/fortnite-1.webp" alt="juego" />
+        <h3 class="title1">FORTNITE</h3>
+        </div>
+        <div class="juego1">
+          <img class="img-game" src="img/hogwarts.jpg" alt="juego" />
+          <h3 class="title1">HOGWARTS</h3>
+        </div>
+        <div class="juego1">
+          <img class="img-game" src="img/world-war.webp" alt="juego" />
+          <h3 class="title1">HEROES</h3>
+        </div>
+        <div class="juego1">
+          <img class="img-game" src="img/horizon.jpg" alt="juego" />
+          <h3 class="title1">HORIZON</h3>
+        </div>
+      </section>
     </article>
+
+    <!--SEGUNDA SECCIÓN-->
+    <article class="libros">
+        <h3 class="tituloLibros">Libros y Arte</h3>
+        <section class="gamesContainer">
+          <div class="juego1">
+            <img class="img-game" src="img/fortnite-1.webp" alt="juego" />
+          <h3 class="title1">FORTNITE</h3>
+          </div>
+          <div class="juego1">
+            <img class="img-game" src="img/hogwarts.jpg" alt="juego" />
+            <h3 class="title1">HOGWARTS</h3>
+          </div>
+          <div class="juego1">
+            <img class="img-game" src="img/world-war.webp" alt="juego" />
+            <h3 class="title1">HEROES</h3>
+          </div>
+          <div class="juego1">
+            <img class="img-game" src="img/horizon.jpg" alt="juego" />
+            <h3 class="title1">HORIZON</h3>
+          </div>
+        </section>
+      </article>
+    
     <!-- Footer -->
     <%- include('partials/footer') %>
-</body>
+  </body>
 </html>
