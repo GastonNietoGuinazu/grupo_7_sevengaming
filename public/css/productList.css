@@ -85,3 +85,21 @@
   text-align: center;
 }
 
+.libro1 {
+    width: 200px;
+    height: 300px;
+    border-radius: 2px; 
+}
+
+.title2 {
+    text-align: center;
+    justify-content: center;
+    margin-top: 12px;
+    margin-bottom: 22px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: white; 
+}
