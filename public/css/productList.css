@@ -62,7 +62,7 @@
 .libros {
     width: 100%;
     height: auto;
-    padding: 27px 31px 50px 31px;
+    padding: 27px 31px 60px 31px;
     background: #121A22;
 
 }
@@ -103,3 +103,40 @@
     line-height: 21px;
     color: white; 
 }
+
+.pins {
+    width: 100%;
+    height: auto;
+    padding: 27px 31px 50px 31px;
+    background-color: white;
+}
+
+.tituloPins {
+    font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #121A22;
+  text-align: center;
+}
+
+.title3 {
+    text-align: center;
+    justify-content: center;
+    margin-top: 12px;
+    margin-bottom: 30px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #121A22;
+ }
+
+ .pin1 {
+    width: 240px;
+    height: 320px;
+    border-radius: 2px; 
+ }
+
