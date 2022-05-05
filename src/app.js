@@ -48,3 +48,7 @@ app.get('/login', function(req,res){
     res.render("login")
 
 });
+
+app.get('/productList', function(req,res){
+    res.render("productList")
+ });
