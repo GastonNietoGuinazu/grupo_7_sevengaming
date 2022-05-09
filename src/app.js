@@ -31,7 +31,7 @@ app.get('/productDetail', function(req,res){
 });
 
 app.get('/cuenta', function(req,res){
-        res.render("cuenta")
+    res.render("cuenta")
 
 });
 
