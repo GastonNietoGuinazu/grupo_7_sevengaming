@@ -1,5 +1,5 @@
-<!-- -------------------------------RETROSPECTIVA--------------------------------------------------- -->
-Sprint 2:
+<!-- -------------------------------RETROSPECTIVA------------------------------------------------------>
+<!------------------------------------------------------Sprint 2---------------------------------------->
 
 -Hacer igual: nuestra impetud para la comunicacion y curiosidad acerca del proyecto. 
 
@@ -9,5 +9,16 @@ Sprint 2:
 
 -Empezar a hacer: mandar mas informacion de el avance del proyecto mas frecuentemente. Coinciodir en un estilo de programacion para todo el proyecto
 
--Dejar de hacer: Cuestionar la realizacion de las tareas de nuestro companieros y sus metodos para completarlas las mismas.
+-Dejar de hacer: Cuestionar la realizacion de las tareas de nuestro compañeros y sus metodos para completarlas las mismas.
 
+<!------------------------------------------------SPRINT 3 ------------------------------------------------>
+
+-Hacer igual: reunión inicial para planificar la concreción de las distintas partes del proyecto.
+
+-Hacer más: mejorar la comunicación en la ejecución del código del proyecto y el hecho de involucrarnos en lo que realiza el compañero.
+
+-Hacer menos: dejar los detalles y correcciones para el día de la entrega.
+
+-Empezar a hacer: comunicarnos cada cierto tiempo para hacer una breve evaluación y colaborar entre nosotros.
+
+-Dejar de hacer: limitarnos sólo a lo que nos toca y no involucrarnos en lo que está realizando el compañero.
