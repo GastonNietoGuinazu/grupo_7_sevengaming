@@ -1,6 +1,22 @@
 const express=require('express');
 const app=express();
 const path=require("path")
+const multer = require('multer');
+
+//MULTER
+const storage = multer.diskStorage({
+    destination: function(req, file, cb) {
+        cb(null, './public/images/avatars');
+    },
+    filename: function(req, file, cb) {
+        cb(null, 
+            `${Date.now()}_img_${path.extname(file.originalname)}`);
+    }
+})
+
+const uploadFile = multer({ storage })
+module.exports = uploadFile;
+
 
 //similar a los recursos estaticos, es para evitar poner el path
 app.set('views',path.resolve(__dirname,'views'));

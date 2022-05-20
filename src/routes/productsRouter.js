@@ -1,5 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const uploadFile = require('../app')
+
 
 const productsController = require("../controllers/productsController.js")
 
