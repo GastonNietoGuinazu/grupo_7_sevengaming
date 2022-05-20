@@ -1,8 +1,7 @@
-const uploadFile = require('../app')
 const fs = require('fs');
 const path = require('path');
-const res = require('express/lib/response');
-
+const uploadFile = require('../app') //???
+const res = require('express/lib/response'); //???
 
 //Path productos
 const productsFilePath = path.join(__dirname, '../data/products.json');
@@ -10,18 +9,44 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productsController = {
 
-    compra: (req, res) => {
+    // Compra
+    buy: (req, res) => {
         res.send("Compra exitosa")
     },
-
-    venta: (req, res) => {
+    // Venta
+    sell: (req, res) => {
         res.send("Venta exitosa")
     },
-
-    detalle: (req, res) => {
+    // Detalle
+    detail: (req, res) => {
         let productoId = req.params.num;
         res.send("Detalle del producto " + productoId);
     },
+    // Creación - Formulario de creación
+	create: (req, res) => {
+		res.render('product-create')
+	},
+    // Creación - Method de store
+	store: (req, res) => {
+		res.send("Producto nuevo agregado");
+	},
+    // Edición - Formulario de edición
+	edit: (req, res) => {
+		let id = req.params.id
+		let productToEdit = products.find(product => product.id == id)
+		res.render('product-edit-form', {productToEdit})
+	},
+    // Edición - Method de update
+	update: (req, res) => {
+		let id = req.params.id
+		res.send("Producto con id " + id + " editado");
+	},
+
+	// Eliminar  
+	destroy : (req, res) => {
+		let id = req.params.id;
+		res.send("Producto con id " + id + " eliminado");
+	}
 
 }
 
@@ -45,3 +70,5 @@ module.exports = {
     getProductsById,
     createProduct
 };
+
+module.exports = productsController;

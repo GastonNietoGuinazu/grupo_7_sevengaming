@@ -1,6 +1,7 @@
-const express=require('express');
-const app=express();
-const path=require("path")
+const express = require('express');
+const app = express();
+const path = require("path")
+const methodOverride = require("method-override")
 const multer = require('multer');
 
 //MULTER
@@ -24,6 +25,9 @@ app.set('views',path.resolve(__dirname,'views'));
 app.set('view engine','ejs')
 //Usamos los recursos estaticos
 app.use(express.static('public'));
+// Para poder usar los métodos PUT y DELETE
+app.use(methodOverride('_method'));
+
 //usando los enrutadores importados
 const productsRouter = require("./routes/productsRouter.js")
 const usersRouter = require("./routes/usersRouter.js")

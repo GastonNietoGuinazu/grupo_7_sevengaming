@@ -22,3 +22,4 @@
 -Empezar a hacer: comunicarnos cada cierto tiempo para hacer una breve evaluación y colaborar entre nosotros.
 
 -Dejar de hacer: limitarnos sólo a lo que nos toca y no involucrarnos en lo que está realizando el compañero.
+
