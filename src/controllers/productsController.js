@@ -37,7 +37,7 @@ const getProductsById = (req, res) => {
 
 const createProduct = (req, res) => {
     let body = req.body
-    console.log(body)
+    
 }
 
 module.exports = {
