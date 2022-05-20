@@ -3,10 +3,16 @@ const router = express.Router();
 const uploadFile = require('../app')
 
 
-const productsController = require("../controllers/productsController.js")
+//Se realiza destructuring de los métodos de productsController
+const { compra, venta, detalle } = require("../controllers/productsController.js")
+const getProducts = require('../controllers/productsController')
 
-router.get("/compra", productsController.compra)
-router.get("/venta", productsController.venta)
-router.get("/:num", productsController.detalle)
+/* router.get("/compra", compra)
+router.get("/venta", venta)
+router.get("/:num", detalle) */
+router.get("/products", getProducts);
+router.get("/products/create", uploadFile.single('avatarFile'), (req, res) => {
+    res.json({message: "Hola amigo"})
+})
 
 module.exports = router;

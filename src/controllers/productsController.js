@@ -1,4 +1,5 @@
-const productsController = {
+
+/* const productsController = {
 
     compra: (req, res) => {
         res.send("Compra exitosa")
@@ -12,6 +13,12 @@ const productsController = {
         let productoId = req.params.num;
         res.send("Detalle del producto " + productoId);
     }
+} */
+
+const getProducts = () => {
+    uploadFile.single('avatarFile'), (req, res) => {
+        res.json({message: "Hola amigo"})
+    }
 }
 
-module.exports = productsController;
+module.exports = getProducts
