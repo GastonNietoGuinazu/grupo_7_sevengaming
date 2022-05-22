@@ -71,4 +71,4 @@ module.exports = {
     createProduct
 };
 
-module.exports = productsController;
+/*module.exports = productsController;*/
