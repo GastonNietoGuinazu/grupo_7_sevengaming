@@ -23,3 +23,21 @@
 
 -Dejar de hacer: limitarnos sólo a lo que nos toca y no involucrarnos en lo que está realizando el compañero.
 
+
+
+<!--------------------------- SPRINT 4 ------------------------------------------------->
+-Hacer igual:
+
+
+-Hacer más:
+
+
+-Hacer menos:
+
+
+-Empezar a hacer:
+
+
+-Dejar de hacer:
+
+
