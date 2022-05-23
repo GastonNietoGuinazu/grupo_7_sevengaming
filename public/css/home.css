@@ -240,7 +240,7 @@ footer {
 }
 
 footer {
-  height: 350px;
+  height: 450px;
   background: #121a22;
   display: flex;
   flex-direction: column;
@@ -664,7 +664,7 @@ footer {
               gap:14px;
             display:flex;
             align-items: center;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: space-between;
             font-weight:200;
             }
