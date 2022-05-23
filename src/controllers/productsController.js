@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
-const uploadFile = require('../app') //???
-const res = require('express/lib/response'); //???
+const uploadFile = require('../app') 
+const res = require('express/lib/response'); 
 
 //Path productos
 const productsFilePath = path.join(__dirname, '../data/products.json');

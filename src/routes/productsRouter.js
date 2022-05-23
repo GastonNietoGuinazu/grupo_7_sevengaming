@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const uploadFile = require('../app'); //???
+const uploadFile = require('../app'); 
 
 //Se realiza destructuring de los métodos de productsController
 const {getProducts, getProductsById, createProduct} = require("../controllers/productsController");

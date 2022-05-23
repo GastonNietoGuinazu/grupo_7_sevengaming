@@ -39,35 +39,3 @@ app.use("/", homeRouter);
 app.listen(3012,()=>{
     console.log('servidor corriendo en http://localhost:3012');
 });
-
-app.get('/',(req,res)=>{
-    res.render("home")
-})
-
-app.get('/productDetail', function(req,res){
-    res.render("productDetail")
-
-});
-
-app.get('/cuenta', function(req,res){
-    res.render("cuenta")
-
-});
-
-app.get('/producto', function(req,res){
-    res.render("producto")
-
-});
-
-app.get('/carrito', function(req,res){
-    res.render("carrito")
-
-});
-app.get('/login', function(req,res){
-    res.render("login")
-
-});
-
-app.get('/productList', function(req,res){
-    res.render("productList")
- });
