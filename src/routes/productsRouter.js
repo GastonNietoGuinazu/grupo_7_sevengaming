@@ -1,18 +1,22 @@
 const express = require("express");
 const router = express.Router();
-const uploadFile = require('../app'); 
+/*const uploadFile = require('../app'); */
 
 //Se realiza destructuring de los métodos de productsController
-const {getProducts, getProductsById, createProduct} = require("../controllers/productsController");
+/*const {getProducts, getProductsById, createProduct} = require("../controllers/productsController");*/
 const productsController = require("../controllers/productsController");
 
 /* router.get("/compra", compra)
 router.get("/venta", venta)
 router.get("/:num", detalle) */
-
-router.get("/products", getProducts)
+router.get("/carrito", productsController.carrito);
+router.get("/productList", productsController.productList);
+router.get("/productDetail", productsController.productDetail);
+router.get("/crearProducto", productsController.crearProducto);
+router.get("/modificarProducto", productsController.modificarProducto);
+/*router.get("/products", getProducts)
 router.get("/products/:id", getProductsById)
-router.post("/products/create", createProduct)
+router.post("/products/create", createProduct)*/
 
 
 /*** Creación de producto ***/ 

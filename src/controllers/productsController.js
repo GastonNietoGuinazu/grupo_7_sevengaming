@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const uploadFile = require('../app') 
+/*const uploadFile = require('../app') */
 const res = require('express/lib/response'); 
 
 //Path productos
@@ -9,6 +9,21 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productsController = {
 
+    carrito: (req, res) => {
+        res.render("carrito")
+    },
+    productList: (req, res) => {
+        res.render("productList")
+    },
+    productDetail: (req, res) => {
+        res.render("productDetail")
+    },
+    crearProducto: (req, res) => {
+        res.render("crearProducto")
+    },
+    modificarProducto: (req, res) => {
+        res.render("modificarProducto")
+    },
     // Compra
     buy: (req, res) => {
         res.send("Compra exitosa")
@@ -50,7 +65,7 @@ const productsController = {
 
 }
 
-const getProducts = (req, res) => {
+/*const getProducts = (req, res) => {
     return res.json(products)
 }
 
@@ -63,12 +78,11 @@ const getProductsById = (req, res) => {
 const createProduct = (req, res) => {
     let body = req.body
     
-}
+}*/
 
-module.exports = {
+module.exports = productsController;
+/*module.exports = {
     getProducts,
     getProductsById,
     createProduct
-};
-
-/*module.exports = productsController;*/
+};*/

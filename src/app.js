@@ -5,17 +5,17 @@ const methodOverride = require("method-override")
 const multer = require('multer');
 
 //MULTER
-const storage = multer.diskStorage({
+/*const storage = multer.diskStorage({
     destination: function(req, file, cb) {
         cb(null, './public/images/avatars');
     },
     filename: function(req, file, cb) {
         cb(null, file.fieldname + `${Date.now()}_img_${path.extname(file.originalname)}`);
     }
-})
+})*/
 
-const uploadFile = multer({ storage })
-module.exports = uploadFile;
+/*const uploadFile = multer({ storage })
+module.exports = uploadFile;*/
 
 
 //similar a los recursos estaticos, es para evitar poner el path

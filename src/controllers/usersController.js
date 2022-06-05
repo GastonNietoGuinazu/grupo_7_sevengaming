@@ -8,9 +8,11 @@ const usersFilePath = path.join(__dirname, '../data/user.json');
 const usersController = {
 
     login: (req, res) => {
-        res.send("Formulario de conexión")
+        res.render("login")
     },
-
+    account: (req, res) => {
+        res.render("cuenta")
+    },
     register: (req, res) => {
         res.send("Formulario de creación")
     }
