@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+/* EXPORTANDO MODULO DE USUARIOS */
+/* const User = require('../models.User'); */
 
 //Path usuarios
 const usersFilePath = path.join(__dirname, '../data/user.json');
