@@ -10,6 +10,14 @@ const usersController = {
     login: (req, res) => {
         res.render("login")
     },
+    processLogin: function (req, res) {
+let errors = validationResult(req);
+if (errors.isEmpty()) {
+
+} else {
+    return res.render('/login', {errors:errors.errors})
+}
+    },
     account: (req, res) => {
         res.render("cuenta")
     },

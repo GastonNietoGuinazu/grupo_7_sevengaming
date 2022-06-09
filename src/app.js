@@ -5,6 +5,7 @@ const methodOverride = require("method-override")
 const multer = require('multer');
 // Instalando express-session
 const session = require('express-session');
+
 //MULTER
 /*const storage = multer.diskStorage({
     destination: function(req, file, cb) {
@@ -33,6 +34,9 @@ app.use(methodOverride('_method'));
 
 // Utilizando middleware a nivel global de express-session
 app.use('session'({secret: 'Secreto'}));
+
+// Cookies
+app.use(cookieParser());
 
 //usando los enrutadores importados
 const productsRouter = require("./routes/productsRouter.js")
