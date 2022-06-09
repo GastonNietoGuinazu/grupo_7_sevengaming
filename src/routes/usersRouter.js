@@ -8,9 +8,9 @@ router.get("/cuenta", usersController.account);
 router.get("/registrarse", usersController.register)
 
 // Ruta de Login
-router.post('/login',[
+/*router.post('/login',[
 check('email'). isEmail().withMessage('Email inválido'),
 check('password'). isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres')
-], usersController.processLogin)
+], usersController.processLogin)*/
 
 module.exports = router;
