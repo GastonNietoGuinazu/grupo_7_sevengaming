@@ -32,7 +32,7 @@ app.use(express.json());
 // Para poder usar los métodos PUT y DELETE
 app.use(methodOverride('_method'));
 // Utilizando middleware a nivel global de express-session
-app.use(session({secret:'Secreto'}));
+app.use(session({secret:'Secreto', resave: false, saveUninitialized: true,}));
 // Cookies
 //app.use(cookieParser());
 

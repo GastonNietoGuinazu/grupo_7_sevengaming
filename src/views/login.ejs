@@ -17,6 +17,17 @@
     <!-- Header -->
     <%- include('partials/header') %>
         <main>
+            <% if (typeof errors != 'undefined') {%>
+                <p style="color: red">ERROR</p>
+            <ul>
+                <% for(let i=0; i < errors.length; i++) { %>
+                    <li>
+                        <%=errors[i].msg%>
+                    </li>
+    <% } %>
+                
+            </ul>
+        <% } %>
             <section>
                 <form action="" method="post">
                     <div class="titulo-2">

@@ -1,10 +1,12 @@
 const fs = require("fs");
 
+
 const User = {
-  fileName: "./data/user.json",
+  fileName: "/data/user.json",
 
   getData: function () {
-    return JSON.parse(fs.readFileSync(this.fileName, "utf-8"));
+    let aux = JSON.parse(fs.readFileSync(this.fileName, "utf-8"))
+    console.log(aux);
   },
   generateId: function () {
     let allUsers = this.findAll();
