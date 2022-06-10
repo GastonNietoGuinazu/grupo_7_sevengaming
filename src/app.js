@@ -2,23 +2,8 @@ const express = require('express');
 const app = express();
 const path = require("path")
 const methodOverride = require("method-override")
-const multer = require('multer');
 // Instalando express-session
 const session = require('express-session');
-
-//MULTER
-/*const storage = multer.diskStorage({
-    destination: function(req, file, cb) {
-        cb(null, './public/images/avatars');
-    },
-    filename: function(req, file, cb) {
-        cb(null, file.fieldname + `${Date.now()}_img_${path.extname(file.originalname)}`);
-    }
-})*/
-
-/*const uploadFile = multer({ storage })
-module.exports = uploadFile;*/
-
 
 //similar a los recursos estaticos, es para evitar poner el path
 app.set('views',path.resolve(__dirname,'views'));
@@ -37,7 +22,6 @@ app.use(session({secret:'Secreto', resave: false, saveUninitialized: true,}));
 //app.use((req,res,next) => res.status(404).render("No encontrado"));
 // Cookies
 //app.use(cookieParser());
-
 
 //usando los enrutadores importados
 const productsRouter = require("./routes/productsRouter.js")

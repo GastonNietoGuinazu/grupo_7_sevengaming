@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-/*const uploadFile = require('../app') */
 const res = require('express/lib/response'); 
 
 //Path productos

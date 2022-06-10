@@ -1,7 +1,17 @@
 const express = require("express");
 const router = express.Router();
-/*const uploadFile = require('../app'); */
+const multer = require('multer');
 
+//MULTER
+const storage = multer.diskStorage({
+    destination: function(req, file, cb) {
+        cb(null, './public/images/imagesProducts');
+    },
+    filename: function(req, file, cb) {
+        cb(null, file.fieldname + `${Date.now()}_img_${path.extname(file.originalname)}`)
+    }
+});
+const uploadFile = multer({storage:storage});
 //Se realiza destructuring de los métodos de productsController
 /*const {getProducts, getProductsById, createProduct} = require("../controllers/productsController");*/
 const productsController = require("../controllers/productsController");
@@ -13,7 +23,7 @@ router.get("/carrito", productsController.carrito);
 router.get("/productList", productsController.productList);
 router.get("/productDetail", productsController.productDetail);
 router.get("/crearProducto", productsController.crearProducto);
-router.get("/modificarProducto", productsController.modificarProducto);
+router.get("/modificarProducto", uploadFile.single("ImagenProducto"),productsController.modificarProducto);
 router.put("/modificarProducto/:id", productsController.modificarProducto);
 
 /*router.get("/products", getProducts)

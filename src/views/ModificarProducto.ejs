@@ -17,10 +17,10 @@
     <%- include('partials/header') %>
         <main class="main__distribution">
             <h1 class="title--format">editar producto </h1>
-            <form action="/modificarProducto/:id?_method=PUT" method="post" class="form--format">
+            <form action="/productos/:id?_method=PUT" method="post" enctype="multipart/form-data"
+                class="form--format">
                 <div class="nombre--format">
                     <div class="nombre--distribucion">
-
                         <label for="username">Seleccione producto</label><br>
                         <select id="productoe" name="producto"> <br>
                             <option value="producto1">producto1</option>
@@ -31,7 +31,8 @@
                     </div><br>
                     <div class="nombre--distribucion">
                         <label for="pwd">descripcion</label><br>
-                        <textarea rows="15" cols="60" name="desripcion" placeholder="Ingrese descripcion del producto..."></textarea><br>
+                        <textarea rows="15" cols="60" name="desripcion"
+                            placeholder="Ingrese descripcion del producto..."></textarea><br>
                         <label>Modificar imagen</label><br>
                         <input type="file" name='imagen1' /><br>
                         <input type="submit" name="subir-imagen" value="enviar imagen" />
@@ -52,7 +53,6 @@
                 <label for="precio">Actualizar precio</label><br>
                 <input type="price" id="prc" name="prc">
             </form>
-
 
             <div class="create--acount">
                 <button class="botom--format" type="button" onclick="alert('cuenta creada!')">Agregar</button>
