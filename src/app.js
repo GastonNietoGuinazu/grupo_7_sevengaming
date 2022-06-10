@@ -34,7 +34,7 @@ app.use(methodOverride('_method'));
 // Utilizando middleware a nivel global de express-session
 app.use(session({secret:'Secreto', resave: false, saveUninitialized: true,}));
 //Error 404
-app.use((req,res,next) => res.status(404).render("No encontrado"));
+//app.use((req,res,next) => res.status(404).render("No encontrado"));
 // Cookies
 //app.use(cookieParser());
 
