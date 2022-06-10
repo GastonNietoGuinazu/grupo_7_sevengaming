@@ -51,7 +51,7 @@ const usersController = {
     res.render("cuenta");
   },
   register: (req, res) => {
-    res.send("Formulario de creación");
+    res.render("cuenta");
   },
 };
 

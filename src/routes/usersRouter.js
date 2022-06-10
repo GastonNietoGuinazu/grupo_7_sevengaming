@@ -4,7 +4,7 @@ const { check, validationResult } = require('express-validator');
 
 const usersController = require("../controllers/usersController.js")
 
-/* router.post('/login', usersController.login); */
+router.get('/login', usersController.login);
 router.get("/cuenta", usersController.account);
 router.get("/registrarse", usersController.register)
 
