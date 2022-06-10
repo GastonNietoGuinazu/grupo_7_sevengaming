@@ -15,54 +15,53 @@
 <body>
     <!-- Header -->
     <%- include('partials/header') %>
-    <main class="main__distribution">
-        <h1 class="title--format">editar producto </h1>
-        <form action="" method="post" class="form--format">
-            <div class="nombre--format">
-<div class="nombre--distribucion">
+        <main class="main__distribution">
+            <h1 class="title--format">editar producto </h1>
+            <form action="/modificarProducto/:id?_method=PUT" method="post" class="form--format">
+                <div class="nombre--format">
+                    <div class="nombre--distribucion">
 
-    <label for="username">Seleccione producto</label><br>
-    <select id="productoe" name="producto"> <br>
-        <option value="producto1">producto1</option>
-        <option value="producto2">producto2</option>
-        <option value="producto3">producto3</option>
-        <option value="producto X">productoX</option>
-    </select>
-</div><br>
-<div class="nombre--distribucion">
-                <label for="pwd">descripcion</label><br>
-                <textarea rows="15" cols="60" name="desripcion">
-Ingrese descripcion del producto...
-                </textarea><br>
-                <label>Modificar imagen</label><br>
-                <input type="file" name='imagen1'/><br>
-                <input type="submit" name="subir-imagen" value="enviar imagen"/>
-            </div>
-            </div>
-            <label for="username">categoria</label><br>
-            <select id="categoria" name="categotria"> <br>
-                <option value="Juego">Juego</option>
-                <option value="Disfraz">Disfraz</option>
-                <option value="Artilugio">Artilugio</option>
-            </select>
-            <label for="username">tematica</label><br>
-            <select id="tematica" name="tematica"> <br>
-                <option value="Destiny">Destiny</option>
-                <option value="LOL">LOL</option>
-                <option value="CSS">CSS</option>
-            </select><br>
-            <label for="precio">Actualizar precio</label><br>
-            <input type="price" id="prc" name="prc">
-        </form>
+                        <label for="username">Seleccione producto</label><br>
+                        <select id="productoe" name="producto"> <br>
+                            <option value="producto1">producto1</option>
+                            <option value="producto2">producto2</option>
+                            <option value="producto3">producto3</option>
+                            <option value="producto X">productoX</option>
+                        </select>
+                    </div><br>
+                    <div class="nombre--distribucion">
+                        <label for="pwd">descripcion</label><br>
+                        <textarea rows="15" cols="60" name="desripcion" placeholder="Ingrese descripcion del producto..."></textarea><br>
+                        <label>Modificar imagen</label><br>
+                        <input type="file" name='imagen1' /><br>
+                        <input type="submit" name="subir-imagen" value="enviar imagen" />
+                    </div>
+                </div>
+                <label for="username">categoria</label><br>
+                <select id="categoria" name="categotria"> <br>
+                    <option value="Juego">Juego</option>
+                    <option value="Disfraz">Disfraz</option>
+                    <option value="Artilugio">Artilugio</option>
+                </select>
+                <label for="username">tematica</label><br>
+                <select id="tematica" name="tematica"> <br>
+                    <option value="Destiny">Destiny</option>
+                    <option value="LOL">LOL</option>
+                    <option value="CSS">CSS</option>
+                </select><br>
+                <label for="precio">Actualizar precio</label><br>
+                <input type="price" id="prc" name="prc">
+            </form>
 
 
-        <div class="create--acount">
-            <button class="botom--format" type="button" onclick="alert('cuenta creada!')">Agregar</button>
-            <div class="data">
+            <div class="create--acount">
+                <button class="botom--format" type="button" onclick="alert('cuenta creada!')">Agregar</button>
+                <div class="data">
+                </div>
             </div>
-        </div>
-    </main>
-      <!-- Footer -->
-      <%- include('partials/footer') %>
+        </main>
+        <!-- Footer -->
+        <%- include('partials/footer') %>
 </body>
+
 </html>
