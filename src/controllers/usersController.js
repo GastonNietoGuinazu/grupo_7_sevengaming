@@ -33,7 +33,7 @@ const usersController = {
             return usuarioLoguear;
           }
         }
-        console.log(usuarioLoguear, "Prueba");
+        
 
         if (usuarioLoguear == undefined) {
           return res.render("login", {
