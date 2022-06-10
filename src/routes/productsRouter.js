@@ -14,8 +14,8 @@ router.get("/productList", productsController.productList);
 router.get("/productDetail", productsController.productDetail);
 router.get("/crearProducto", productsController.crearProducto);
 router.get("/modificarProducto", productsController.modificarProducto);
-router.put("/modificarProducto/:id");
-router.delete("modificarProducto/:id");
+router.put("/modificarProducto/:id", productsController.modificarProducto);
+
 /*router.get("/products", getProducts)
 router.get("/products/:id", getProductsById)
 router.post("/products/create", createProduct)*/
