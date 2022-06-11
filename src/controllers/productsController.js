@@ -21,7 +21,7 @@ const productsController = {
         res.render("crearProducto")
     },
     modificarProducto: (req, res) => {
-        res.render("modificarProducto")
+        res.render("ModificarProducto")
     },
     // Compra
     buy: (req, res) => {

@@ -8,7 +8,7 @@ const storage = multer.diskStorage({
         cb(null, './public/images/imagesProducts');
     },
     filename: function(req, file, cb) {
-        cb(null, file.fieldname + `${Date.now()}_img_${path.extname(file.originalname)}`)
+        cb(null, file.fieldname +`${Date.now()}_img_${path.extname(file.originalname)}`)
     }
 });
 const uploadFile = multer({storage:storage});
@@ -23,7 +23,7 @@ router.get("/carrito", productsController.carrito);
 router.get("/productList", productsController.productList);
 router.get("/productDetail", productsController.productDetail);
 router.get("/crearProducto", productsController.crearProducto);
-router.get("/modificarProducto", uploadFile.single("ImagenProducto"),productsController.modificarProducto);
+router.get("/modificarProducto", uploadFile.single("imagen1"),productsController.modificarProducto);
 router.put("/modificarProducto/:id", productsController.modificarProducto);
 
 /*router.get("/products", getProducts)
