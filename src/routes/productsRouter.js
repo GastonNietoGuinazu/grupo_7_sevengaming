@@ -24,6 +24,7 @@ router.get("/productList", productsController.productList);
 router.get("/productDetail", productsController.productDetail);
 router.get("/crearProducto", productsController.crearProducto);
 router.get("/modificarProducto", uploadFile.single("imagen1"),productsController.modificarProducto);
+// Procesa la edición 
 router.put("/modificarProducto/:id", productsController.modificarProducto);
 
 /*router.get("/products", getProducts)
