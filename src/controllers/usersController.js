@@ -9,6 +9,10 @@ const bcrypt = require("bcrypt");
 const usersFilePath = path.join(__dirname, "../data/user.json");
 /*const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));*/
 
+/* REQUIRIENDO MODULO DE USUARIOS */
+/* const User = require('../models/User'); */
+
+
 const usersController = {
   login: (req, res) => {
     console.log(req.body);
