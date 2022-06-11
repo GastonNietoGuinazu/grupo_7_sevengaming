@@ -1,6 +1,5 @@
 const fs = require("fs");
 
-
 const User = {
   fileName: "/data/user.json",
 

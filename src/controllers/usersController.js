@@ -15,9 +15,10 @@ const usersFilePath = path.join(__dirname, "../data/user.json");
 
 const usersController = {
   login: (req, res) => {
-    console.log(req.body);
-
     res.render("login");
+  },
+  processRegister: (req,res) => {
+    
   },
   processLogin: function (req, res) {
     let errors = validationResult(req);
