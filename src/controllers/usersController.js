@@ -8,6 +8,8 @@ const usersFilePath = path.join(__dirname, "../data/user.json"); //Path usuarios
 /*const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));*/
 /* REQUIRIENDO MODULO DE USUARIOS */
 /* const User = require('../models/User'); */
+const register = require("../models/register");
+
 const usersController = {
   login: (req, res) => {
     res.render("login");
@@ -15,10 +17,26 @@ const usersController = {
   processRegister: (req,res) => {
     const resultValidations = validationResult(req);
     if(resultValidations.errors.length > 0){
-      res.render("crearCuenta", {
-        errors: resultValidations.mapped()
+      return res.render("crearCuenta", {
+        errors: resultValidations.mapped(),
+        oldData: req.body
       })
     }
+    let userInDB = user.findByField("email", req.body.email);
+    if(userInDB){
+      return res.render("crearCuenta",  {
+        errors: {
+          email: {msg:"Este email ya esta registrado"}
+        },
+        oldData: req.body
+      })
+    }
+    let userToCreate = {
+      ...req.body,
+      contraseña: req.hashSync(req.body.contraseña, 10),
+    }
+    let userCreated = register.create(userToCreate);
+    return res.redirect("/usuarios/login");
   },
   processLogin: function (req, res) {
     let errors = validationResult(req);
