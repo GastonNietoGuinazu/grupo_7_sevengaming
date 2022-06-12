@@ -1,17 +1,17 @@
 const express = require("express");
 const router = express.Router();
-const { check, validationResult } = require('express-validator');
 
-const usersController = require("../controllers/usersController.js")
+//Controller
+const usersController = require("../controllers/usersController.js");
 
-router.get('/login', usersController.login);
-router.get("/cuenta", usersController.account);
-router.get("/registrarse", usersController.register)
+//Middlewares
+const validationsRegister = require("../middlewares/registerValidations.js");
+const validationsLogin = require("../middlewares/loginValidations.js");
 
-// Ruta de Login
-router.post('/login',[
-check('email'). isEmail().withMessage('Email inválido'),
-check('password'). isLength({min: 8}).withMessage('La contraseña debe tener al menos 8 caracteres')
-], usersController.processLogin)
+router.get('/login', usersController.login); //Formulario de login
+router.get("/cuenta", usersController.account); //Nada, pendiente a definir
+router.get("/registrarse", usersController.register); //Formulario de creación de cuenta
+router.post('/login', validationsLogin, usersController.processLogin); //Procesa el ingreso de una cuenta
+router.post("/registrarse", validationsRegister, usersController.processRegister); //Procesa la creacion de una cuenta
 
 module.exports = router;

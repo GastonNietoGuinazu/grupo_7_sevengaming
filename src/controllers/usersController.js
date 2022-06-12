@@ -18,7 +18,7 @@ const usersController = {
     res.render("login");
   },
   processRegister: (req,res) => {
-    
+    //const resultValidations = validationResult(req);
   },
   processLogin: function (req, res) {
     let errors = validationResult(req);
@@ -30,7 +30,6 @@ const usersController = {
       } else {
         users = JSON.parse(usersJson);
       }
-
       for (let i = 0; i < users.length; i++) {
         if (users[i].email == req.body.email) {
           if (bcrypt.compareSync(req.body.password, users[i].password)) {
@@ -38,8 +37,6 @@ const usersController = {
             return usuarioLoguear;
           }
         }
-        
-
         if (usuarioLoguear == undefined) {
           return res.render("login", {
             errors: [{ msg: "Credenciales incorrectas" }],
@@ -56,7 +53,7 @@ const usersController = {
     res.render("cuenta");
   },
   register: (req, res) => {
-    res.render("cuenta");
+    res.render("crearCuenta");
   },
 };
 

@@ -11,9 +11,9 @@ const uploadFile = require("../middlewares/uploadFileEditProduct");
 /* router.get("/compra", compra)
 router.get("/venta", venta)
 router.get("/:num", detalle) */
-router.get("/carrito", productsController.carrito);
-router.get("/productList", productsController.productList);
-router.get("/productDetail", productsController.productDetail); 
+router.get("/carrito", productsController.carrito); //Vista de la selección de compra
+router.get("/productList", productsController.productList); //Vista lista de productos
+router.get("/productDetail", productsController.productDetail); //Vista detalle del producto 
 router.get("/crearProducto", productsController.crearProducto); //Formulario de creación de productos
 router.get("/modificarProducto", uploadFile.single("imagen1"),productsController.modificarProducto); //Formulario de edición de productos
 router.put("/modificarProducto/:id", productsController.modificarProducto); // Procesa la edición 

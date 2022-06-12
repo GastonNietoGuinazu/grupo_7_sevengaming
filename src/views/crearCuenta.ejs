@@ -2,25 +2,97 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://kit.fontawesome.com/6d7ddf6bb9.js" crossorigin="anonymous"></script>
-  <link href="/css/crearCuenta.css" rel="stylesheet" />
-  <title>Seven Gaming</title>
-  <script src="https://kit.fontawesome.com/6d6a4fc15e.js" crossorigin="anonymous"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/v4-shims.js"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/fontawesome.js"></script>
-  <script src="https://kit.fontawesome.com/6d6a4fc15e.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/home.css">
+    <script src="https://kit.fontawesome.com/6d7ddf6bb9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/cuenta.css">
+    <title>Seven Gaming</title>
 </head>
 
 <body>
-  <%- include('partials/header') %>
-    <article class="body">
+    <!-- Header -->
+    <%- include('partials/header') %>
+        <main class="main__distribution">
+            <h1 class="title--format"> Crear cuenta</h1>
+            <!-- <form action="" method="post" class="form--format">
+            <div class="nombre--format">
+<div class="nombre--distribucion">
 
-    </article>
-    <%- include('partials/footer') %>
+    <label for="username">Nombre</label><br>
+    <input type="text" id="username" name="username"><br>
+</div>
+<div class="nombre--distribucion">
+                <label for="pwd">Apellido</label><br>
+                <input type="text" id="pwd" name="pwd"><br>
+            </div>
+            </div>
+            <label for="username">Numero de telefono(opcional)</label><br>
+            <input type="text" id="numero" name="nombre"><br>
+            <label for="username">Email</label><br>
+            <input type="text" id="mail" name="mail"><br>
+            <label for="pwd">Contrasena</label><br>
+            <input type="password" id="pwd" name="pwd"><br>
+            <label for="pwd">Confirmar Contrasena</label><br>
+            <input type="confirm--password" id="pwd" name="pwd">
+        </form> -->
+            <div class="container-gral">
+                <div class="form-container-gral">
+                    <form class="form-container" action="/usuarios/cuenta">
+                        <div class="name-container">
+                            <label class="label-name" for="nombre">Nombre</label>
+                            <input class="input-name" type="text" name="nombre" id="" placeholder="Nombre">
+                        </div>
+                        <div class="name-container">
+                            <label class="label-name" for="nombre">Apellido</label>
+                            <input class="input-name" type="text" name="nombre" id="" placeholder="Apellido">
+                        </div>
+                        <div class="name-container">
+                            <label class="label-name" for="nombre">Número de teléfono (Opcional)</label>
+                            <input class="input-name" type="text" name="nombre" id="" placeholder="Teléfono">
+                        </div>
+                        <div class="name-container">
+                            <label class="label-name" for="nombre">Email</label>
+                            <input class="input-name" type="email" name="nombre" id="" placeholder="Email">
+                        </div>
+                        <div class="name-container">
+                            <label class="label-name" for="nombre">Contraseña</label>
+                            <input class="input-name" type="password" name="nombre" id="" placeholder="Contraseña">
+                        </div>
+                        <div class="name-container">
+                            <label class="label-name" for="nombre">Confirmar contraseña</label>
+                            <input class="input-name" type="password" name="nombre" id=""
+                                placeholder="Confirmar contraseña">
+                        </div>
+                    </form>
+                    <form class="form-humano" action="" method="post">
+                        <input class="checkbox" type="checkbox"><label class="texto-robot" for="">No soy un
+                            robot</label><img class="logo-captcha" src="/public/img/captcha.png" alt="captcha">
+                    </form>
+                </div>
+            </div>
+            <!-- <div class="reCAPTCHA">
+    <form action="" method="post" >
+        <div class="nombre--format1">
+
+            <input class="opcion--humano" type="checkbox" id="1" name="1" value="1">
+            <label class="robot" for="vehicle1"> No soy un robot</label><br>  
+            <img class="img" src="./img/360_F_374832817_o1XM5iP8cKloqbNCMAQZjC2wijiNxcec.jpeg" alt="logo recaptcha">
+        </div>  
+
+</div> -->
+
+            <div class="create--acount">
+                <button class="botom--format" type="button" onclick="alert('cuenta creada!')">Crear cuenta</button>
+                <div class="data">
+
+                    <p>Ya tienes una cuenta?<i> Inicia sesión </i></p>
+                </div>
+            </div>
+        </main>
+        <!-- Footer -->
+        <%- include('partials/footer') %>
 </body>
 
 </html>
