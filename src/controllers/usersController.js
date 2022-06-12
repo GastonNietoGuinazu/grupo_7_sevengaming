@@ -4,21 +4,21 @@ const { check, validationResult } = require("express-validator");
 const bcrypt = require("bcrypt");
 /* EXPORTANDO MODULO DE USUARIOS */
 /* const User = require('../models.User'); */
-
-//Path usuarios
-const usersFilePath = path.join(__dirname, "../data/user.json");
+const usersFilePath = path.join(__dirname, "../data/user.json"); //Path usuarios
 /*const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));*/
-
 /* REQUIRIENDO MODULO DE USUARIOS */
 /* const User = require('../models/User'); */
-
-
 const usersController = {
   login: (req, res) => {
     res.render("login");
   },
   processRegister: (req,res) => {
-    //const resultValidations = validationResult(req);
+    const resultValidations = validationResult(req);
+    if(resultValidations.errors.length > 0){
+      res.render("crearCuenta", {
+        errors: resultValidations.mapped()
+      })
+    }
   },
   processLogin: function (req, res) {
     let errors = validationResult(req);

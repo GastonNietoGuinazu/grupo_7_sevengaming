@@ -61,19 +61,15 @@ const productsController = {
 		let id = req.params.id;
 		res.send("Producto con id " + id + " eliminado");
 	}
-
 }
-
 /*const getProducts = (req, res) => {
     return res.json(products)
 }
-
 const getProductsById = (req, res) => {
     let id = req.params.id;
     let filter =  products.filter(product => product.id == id);
     return res.json(filter)
 }
-
 const createProduct = (req, res) => {
     let body = req.body
     
