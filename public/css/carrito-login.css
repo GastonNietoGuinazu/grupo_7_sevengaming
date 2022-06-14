@@ -87,6 +87,7 @@ header {
     height: 4em;
 }
 .descripción {
+    margin-left: 3em;
     text-align: center;
 }
 

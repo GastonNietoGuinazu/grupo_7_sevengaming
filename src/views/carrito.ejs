@@ -19,19 +19,16 @@
     <main>
         <section>
             <div class="titulo-1"><h4>Carrito de Compras</h4></div>
-
             <article class="superior">
                 <div><p class="item-1">Subtotal</p></div>
                 <div><p class="item-2">Total</p></div>
                 <div><p class="item-3">$4.500</p></div>
                 <div><p class="item-4">$4.500</p></div>
             </article>
-
             <article class="intermedio">
-                <div class="cuadrado">Imagen del producto</div>
+                <img class="cuadrado" src="/images/gorra-fortnite.jpg" alt="accesorio" />
                 <div class="descripción"><p>Nombre y descripción del producto</p></div>
             </article>
-
             <article class="inferior">
                 <div class="item"><p>Precio</p></div>
                 <div class="item"><p>Cantidad</p></div>
@@ -40,11 +37,10 @@
                 <div class="item"><p>Cuadro</p></div>
                 <div class="item"><p>$4.500</p></div>
             </article>
-
             <article class="botones">
-                <form action="" method="post">
-                    <label for=""><button type="submit"></button>Enviar</label>
-                    <label for=""><button type="reset"></button>Eliminar</label>
+                <form action="/productos/carrito" method="post">
+                    <button class="botom--format" type="button">Enviar</button>
+                    <button class="botom--format" type="button">Eliminar</button>
                 </form>
             </article>
         </section>
