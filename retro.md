@@ -25,19 +25,19 @@
 
 
 
-<!--------------------------- SPRINT 4 ------------------------------------------------->
--Hacer igual:
+<!--------------------------- SPRINT 5 ------------------------------------------------->
+-Hacer igual: seguir fomentando nuestro estudio y repaso del contenido para continuar construyendo nuestro proyecto.
 
 
--Hacer más:
+-Hacer más: practicar más la comunicación y el trabajo en equipo para evitar posibles errores a la hora de subir las actualizaciones de archivos. Dedicarle más tiempo.
 
 
--Hacer menos:
+-Hacer menos: dejar para último momento las correcciones y detalles que no llegamos a completar. Decepcionarnos por que algo no salió como esperábamos.
 
 
--Empezar a hacer:
+-Empezar a hacer: seguir intentando y trabajar aunque las cosas no salgan como esperamos. 
 
 
--Dejar de hacer:
+-Dejar de hacer: comunicarnos poco o cuando ya queda poco tiempo de trabajo para entregar el proyecto.
 
 
