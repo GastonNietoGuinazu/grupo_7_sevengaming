@@ -14,19 +14,19 @@ const usersController = {
   login: (req, res) => {
     res.render("login");
   },
-  processRegister: (req,res) => {
+  processRegister: (req, res) => {
     const resultValidations = validationResult(req);
-    if(resultValidations.errors.length > 0){
+    if (resultValidations.errors.length > 0) {
       return res.render("crearCuenta", {
         errors: resultValidations.mapped(),
         oldData: req.body
       })
     }
     let userInDB = user.findByField("email", req.body.email);
-    if(userInDB){
-      return res.render("crearCuenta",  {
+    if (userInDB) {
+      return res.render("crearCuenta", {
         errors: {
-          email: {msg:"Este email ya esta registrado"}
+          email: { msg: "Este email ya esta registrado" }
         },
         oldData: req.body
       })
@@ -41,25 +41,19 @@ const usersController = {
   processLogin: function (req, res) {
     let errors = validationResult(req);
     if (errors.isEmpty()) {
-      let usersJson = fs.readFileSync("user.json", { errors: errors.errors });
-      let users;
-      if (usersJson == "") {
-        users = [];
-      } else {
-        users = JSON.parse(usersJson);
-      }
+      let users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+      let usuarioLoguear;
       for (let i = 0; i < users.length; i++) {
         if (users[i].email == req.body.email) {
-          if (bcrypt.compareSync(req.body.password, users[i].password)) {
-            let usuarioLoguear = users[i];
-            return usuarioLoguear;
+          if /* (bcrypt.compareSync(req.body.password, users[i].password)) */(req.body.password == users[i].password) {
+            usuarioLoguear = users[i];
           }
         }
-        if (usuarioLoguear == undefined) {
-          return res.render("login", {
-            errors: [{ msg: "Credenciales incorrectas" }],
-          });
-        }
+      }
+      if (usuarioLoguear == undefined) {
+        return res.render("login", {
+          errors: [{ msg: "Credenciales incorrectas" }],
+        });
       }
       req.session.usuarioLogueado = usuarioLoguear;
       res.redirect("/");
