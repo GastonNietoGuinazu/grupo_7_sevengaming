@@ -4,118 +4,103 @@
   "description": "vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui luctus rutrum nulla tellus in sagittis dui",
   "price": 1500.41,
   "category": "libros",
-  "image": "PRODUCTS-xanela-paraiso.jpg",
-  "colors": "blue"
+  "image": "PRODUCTS-xanela-paraiso.jpg"
 }, {
   "id": 2,
   "name": "Remera Harry Potter",
   "description": "vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque",
   "price": 2815.69,
   "category": "ropa",
-  "image": "PRODUCTS-xanela-paraiso.jpg",
-  "colors": "black"
+  "image": "PRODUCTS-xanela-paraiso.jpg"
 }, {
   "id": 3,
   "name": "Remera Pokemon",
   "description": "viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti",
   "price": 3460.26,
   "category": "ropa",
-  "image": "PRODUCTS-xanela-paraiso.jpg",
-  "colors": "yellow"
+  "image": "PRODUCTS-xanela-paraiso.jpg"
 }, {
   "id": 4,
   "name": "Remera IronMan",
   "description": "erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent",
   "price": 4546.66,
   "category": "ropa",
-  "image": "PRODUCTS-product_f_i_filtro_detalle_tacita.jpg",
-  "colors": "red"
+  "image": "PRODUCTS-product_f_i_filtro_detalle_tacita.jpg"
 }, {
   "id": 5,
   "name": "Libro Pokemon",
   "description": "turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices",
   "price": 1652.0,
   "category": "libros",
-  "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
-  "colors": "black"
+  "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png"
 }, {
   "id": 6,
   "name": "Libro Harry Potter y las reliquias de la muerte",
   "description": "nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut",
   "price": 3950.36,
   "category": "libros",
-  "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png",
-  "colors": "black"
+  "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png"
 }, {
   "id": 7,
   "name": "Libro Ready Player One",
   "description": "quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae",
   "price": 1101.99,
   "category": "libros",
-  "image": "PRODUCTS-xanela-paraiso.jpg",
-  "colors": "blue"
+  "image": "PRODUCTS-xanela-paraiso.jpg"
 }, {
   "id": 8,
   "name": "Remera Pokemon",
   "description": "mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in",
   "price": 1034.97,
   "category": "ropa",
-  "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
-  "colors": "yellow"
+  "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png"
 }, {
   "id": 9,
   "name": "Mochila PlayStation",
   "description": "rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin",
   "price": 3178.39,
   "category": "accesorios",
-  "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png",
-  "colors": "black"
+  "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png"
 }, {
   "id": 10,
   "name": "Gorra Fortnite",
   "description": "eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id",
   "price": 4624.53,
   "category": "accesorios",
-  "image": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg",
-  "colors": "black"
+  "image": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg"
 }, {
   "id": 11,
   "name": "Pin Mujer Maravilla",
   "description": "ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi",
   "price": 2046.77,
   "category": "accesorios",
-  "image": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg",
-  "colors": "red"
+  "image": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg"
 }, {
   "id": 12,
   "name": "Remera Call of Duty",
   "description": "orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam",
   "price": 999.79,
   "category": "ropa",
-  "image": "PRODUCTS-xanela-paraiso.jpg",
-  "colors": "orange"
+  "image": "PRODUCTS-xanela-paraiso.jpg"
 }, {
   "id": 13,
   "name": "Remera Uncharted",
   "description": "est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede",
   "price": 4931.09,
   "category": "ropa",
-  "image": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg",
-  "colors": "yellow"
+  "image": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg"
 }, {
   "id": 14,
   "name": "Pin Batman",
   "description": "quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna",
   "price": 1608.18,
   "category": "accesorios",
-  "image": "PRODUCTS-ROOIBOS-CARAMELO.jpg",
-  "colors": "black"
+  "image": "PRODUCTS-ROOIBOS-CARAMELO.jpg"
 }, {
   "id": 15,
   "name": "Pin Thor",
   "description": "cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien",
   "price": 1934.91,
   "category": "accesorios",
-  "image": "PRODUCTS-golden-monkey.jpg",
-  "colors": "grey"
+  "image": "PRODUCTS-golden-monkey.jpg"
 }]
