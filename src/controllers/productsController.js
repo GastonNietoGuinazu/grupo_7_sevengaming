@@ -20,9 +20,6 @@ const productsController = {
     crearProducto: (req, res) => {
         res.render("crearProducto")
     },
-    modificarProducto: (req, res) => {
-        res.render("ModificarProducto")
-    },
     // Compra
     buy: (req, res) => {
         res.send("Compra exitosa")
@@ -48,7 +45,7 @@ const productsController = {
 	edit: (req, res) => {
 		let id = req.params.id
 		let productToEdit = products.find(product => product.id == id)
-		res.render('product-edit-form', {productToEdit})
+		res.render('ModificarProducto', {productToEdit})
 	},
     // Edición - Method de update
 	update: (req, res) => {

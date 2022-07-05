@@ -17,7 +17,7 @@
     <%- include('partials/header') %>
         <main class="main__distribution">
             <h1 class="title--format">editar producto </h1>
-            <form action="/productos/modificarProducto/:id?_method=PUT" method="post" enctype="multipart/form-data"
+            <form action="/productos/edit/:id?_method=patch" method="post" enctype="multipart/form-data"
                 class="form--format">
                 <div class="nombre--format">
                     <div class="nombre--distribucion">
