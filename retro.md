@@ -40,4 +40,10 @@
 
 -Dejar de hacer: comunicarnos poco o cuando ya queda poco tiempo de trabajo para entregar el proyecto.
 
-
+<!--------------------------- SPRINT 7 ------------------------------------------------->
+- seguimos trabajando en la constancia como grupo frente a los desafios
+- debemos superar la dificultad de contar con menos integrantes distribuyendo mejor las tareas
+- lograr mayor dedicacion diaria al proyecto sin embargo estamos logrando que cada integrante aporte su parte
+- Nos juntamos para este sprint de manera virtual unas dos veces en reunion, logramos una comunicacion existente aunque hay intenciones de lograr una mayor reiteracion de reuniones para este ultimo tramo
+- nos enfocamos en los errores que venimos teniendo en el proyecto
+- encarar con mayoor impetud los nuevos desafios del proyecto
