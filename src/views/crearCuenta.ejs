@@ -41,7 +41,7 @@
                 <form class="form-container" action="/usuarios/cuenta" method="post">
                     <div class="name-container">
                         <label class="label-name" for="nombre">Nombre</label>
-                        <input lass="input-name" type="text" name="nombre" id="" placeholder="Nombre">
+                        <input class="input-name" type="text" name="nombre" id="" placeholder="Nombre">
                         <% if (locals.errors && erros.nombre) { %>
                             <div class="invalid-text">
                                 <%= errors.nombre.msg %>
@@ -93,13 +93,13 @@
                 <form class="form-humano" action="" method="post">
                     <input class="checkbox" type="checkbox"><label class="texto-robot" for="">No soy un
                         robot</label><img class="logo-captcha" src="/public/img/captcha.png" alt="captcha">
+                        <div class="create--acount">
+                            <button class="botom--format" type="submit" onclick="alert('cuenta creada!')">Crear cuenta</button>
+                            <div class="data">
+                                <p>Ya tienes una cuenta?<a href="/usuarios/login"><i>Inicia sesión</i></a></p>
+                            </div>
+                        </div>
                 </form>
-            </div>
-            <div class="create--acount">
-                <button class="botom--format" type="button" onclick="alert('cuenta creada!')">Crear cuenta</button>
-                <div class="data">
-                    <p>Ya tienes una cuenta?<a href="/usuarios/login"><i>Inicia sesión</i></a></p>
-                </div>
             </div>
         </div>
         <!-- <div class="reCAPTCHA">
