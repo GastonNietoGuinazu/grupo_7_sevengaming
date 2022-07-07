@@ -1,11 +1,11 @@
 const { check } = require("express-validator");
 
 const validationsRegister = [
-    check("nombre"),
-    check("apellido"),
+    check("first_name"),
+    check("last_name"),
     check("email").isEmail().withMessage('Email inválido'), 
-    check("contraseña").isLength({ min: 8 }).withMessage('La contraseña debe tener al menos 8 caracteres'),
-    check("contraseña2"),
+    check("password").isLength({ min: 8 }).withMessage('La contraseña debe tener al menos 8 caracteres'),
+    check("password2"),
 ];
 
 module.exports = validationsRegister;

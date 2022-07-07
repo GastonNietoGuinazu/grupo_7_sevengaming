@@ -2,8 +2,6 @@ const fs = require("fs");
 const path = require("path");
 const { check, validationResult } = require("express-validator");
 const bcrypt = require("bcrypt");
-/* EXPORTANDO MODULO DE USUARIOS */
-/* const User = require('../models.User'); */
 const usersFilePath = path.join(__dirname, "../data/user.json"); //Path usuarios
 /*const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));*/
 /* REQUIRIENDO MODULO DE USUARIOS */
@@ -22,7 +20,7 @@ const usersController = {
         oldData: req.body
       })
     }
-    let userInDB = user.findByField("email", req.body.email);
+    let userInDB = register.findByField("email", req.body.email);
     if (userInDB) {
       return res.render("crearCuenta", {
         errors: {
@@ -33,7 +31,7 @@ const usersController = {
     }
     let userToCreate = {
       ...req.body,
-      contraseña: req.hashSync(req.body.contraseña, 10),
+      password: bcrypt.hashSync(req.body.password, 10),
     }
     let userCreated = register.create(userToCreate);
     return res.redirect("/usuarios/login");

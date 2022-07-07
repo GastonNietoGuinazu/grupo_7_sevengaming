@@ -1,81 +1,92 @@
-[{
-    "id": 1,
-    "first_name": "Layne",
-    "last_name": "Laurant",
-    "email": "llaurant0@myspace.com",
-    "password": "3mpbvsRfQe",
-    "category": "user",
-    "image": "user_1.jpg"
-  }, {
-    "id": 2,
-    "first_name": "Olivier",
-    "last_name": "Keyworth",
-    "email": "okeyworth1@cocolog-nifty.com",
-    "password": "CLh5iSwmiMmL",
-    "category": "user",
-    "image": "user_2.jpg"
-  }, {
-    "id": 3,
-    "first_name": "De witt",
-    "last_name": "Goodwins",
-    "email": "dgoodwins2@free.fr",
-    "password": "xcZqGtwN",
-    "category": "user",
-    "image": "user_3.jpg"
-  }, {
-    "id": 4,
-    "first_name": "Nefen",
-    "last_name": "Leads",
-    "email": "nleads3@instagram.com",
-    "password": "lfqR05r1z",
-    "category": "user",
-    "image": "user_4.jpg"
-  }, {
-    "id": 5,
-    "first_name": "Des",
-    "last_name": "Jills",
-    "email": "djills4@sourceforge.net",
-    "password": "XFc77lNWR",
-    "category": "user",
-    "image": "user_5.jpg"
-  }, {
-    "id": 6,
-    "first_name": "Agatha",
-    "last_name": "Jills",
-    "email": "ajills5@irs.gov",
-    "password": "FQchBk",
-    "category": "user",
-    "image": "user_6.jpg"
-  }, {
-    "id": 7,
-    "first_name": "Yuma",
-    "last_name": "Battams",
-    "email": "ybattams6@symantec.com",
-    "password": "lUqL3n",
-    "category": "user",
-    "image": "user_7.jpg"
-  }, {
-    "id": 8,
-    "first_name": "Innis",
-    "last_name": "Runcieman",
-    "email": "iruncieman7@ask.com",
-    "password": "Tq4Qd60",
-    "category": "user",
-    "image": "user_8.jpg"
-  }, {
-    "id": 9,
-    "first_name": "Ewen",
-    "last_name": "Gradley",
-    "email": "egradley8@ted.com",
-    "password": "oMEfKeP8",
-    "category": "user",
-    "image": "user_9.jpg"
-  }, {
-    "id": 10,
-    "first_name": "Murial",
-    "last_name": "Adamoli",
-    "email": "madamoli9@virginia.edu",
-    "password": "Y2Z7jXx",
-    "category": "user",
-    "image": "user_10.jpg"
-  }]
+[
+ {
+  "id": 1,
+  "first_name": "Bernabé",
+  "last_name": "Rodriguez",
+  "email": "Berna@myspace.com",
+  "password": "1234admin",
+  "category": "admin",
+  "image": ""
+ },
+ {
+  "id": 2,
+  "first_name": "Pedro",
+  "last_name": "Cassani",
+  "email": "pedro@gmail.com",
+  "password": "12345admin",
+  "category": "admin",
+  "image": ""
+ },
+ {
+  "id": 3,
+  "first_name": "Gaston",
+  "last_name": "Nieto",
+  "phone number": "",
+  "email": "gaston@gmail.com",
+  "password": "$2b$10$Q5WCSZRSbDZnk5ZfOcRs3eVKt8sDov8BW3PfUsr0GAOcTU7TLLwie",
+  "password2": "123456admin"
+ },
+ {
+  "id": 4,
+  "first_name": "Maria",
+  "last_name": "Aguirre",
+  "phone number": "",
+  "email": "Mari@gmail.com",
+  "password": "$2b$10$sPyzEtILaluy3cvUrPCwK.EC1nVr3lCgq9AEW0GC3RpoHhYUoXw/a",
+  "password2": "123maria"
+ },
+ {
+  "id": 5,
+  "first_name": "Mateo",
+  "last_name": "Alferez",
+  "phone number": "",
+  "email": "Mateo@hotmail.com",
+  "password": "$2b$10$1B6gcB9aLihpQcs9eNVhp.hZlrIWvnJBNNKlkKikzwWe.ZXzRK/fK",
+  "password2": "789456123"
+ },
+ {
+  "id": 6,
+  "first_name": "Luz",
+  "last_name": "Alcorta",
+  "phone number": "",
+  "email": "LuzAlcorta@msn.com",
+  "password": "$2b$10$UOjWkKGKwPGif2nvcYXq1..hgbtH5hAEsOY3A59y9S8sTMMAqRBRW",
+  "password2": "luz123456"
+ },
+ {
+  "id": 7,
+  "first_name": "Julieta",
+  "last_name": "Marquez",
+  "phone number": "",
+  "email": "juli73@gmail.com",
+  "password": "$2b$10$pUiUtTxU7MJw3jHXs0TYO.EkQLwuKrIlrsU3TRZDosXMYBqBcfSIq",
+  "password2": "123@july"
+ },
+ {
+  "id": 8,
+  "first_name": "Martin",
+  "last_name": "Lucero",
+  "phone number": "",
+  "email": "Martin487@hotmail.com",
+  "password": "$2b$10$xo9fbZA6V3G1PP0bOmpjlONESxQFa6AQmc0H8W/PuRRXTawR.WWJe",
+  "password2": "88888888"
+ },
+ {
+  "id": 9,
+  "first_name": "Valentin",
+  "last_name": "Garcia",
+  "phone number": "",
+  "email": "VaGarcia@live.com",
+  "password": "$2b$10$2luCU/QpL1UAiz/0d5/XzeT7A.mMqNdjQbEdy/mAcX/Wy/htQpCXe",
+  "password2": "753159"
+ },
+ {
+  "id": 10,
+  "first_name": "Jose",
+  "last_name": "Hernandez",
+  "phone number": "",
+  "email": "joseHer15@gmail.com",
+  "password": "$2b$10$At0gqV.JnJ7UWfWvKSR8Ue7HlzD1UwzVPjyDlW6vPX7Dkx8KrHXDG",
+  "password2": "123@jose15"
+ }
+]
