@@ -5,6 +5,17 @@ const methodOverride = require("method-override")
 // Instalando express-session
 const session = require('express-session');
 
+const db = require("./database/database");
+
+(async ()=> {
+    try {
+        await db.authenticate()
+console.log('Conectados a la base de datos')
+    } catch (error) {
+        throw new Error(error)
+    }
+})();
+
 //similar a los recursos estaticos, es para evitar poner el path
 app.set('views',path.resolve(__dirname,'views'));
 //configuramos el motor de plantillas (EJS)
@@ -26,7 +37,8 @@ app.use(session({secret:'Secreto', resave: false, saveUninitialized: true,}));
 //usando los enrutadores importados
 const productsRouter = require("./routes/productsRouter.js")
 const usersRouter = require("./routes/usersRouter.js")
-const homeRouter = require("./routes/homeRouter.js")
+const homeRouter = require("./routes/homeRouter.js");
+/* const db = require('./database/database.js'); */
 
 app.use("/productos", productsRouter);
 app.use("/usuarios", usersRouter);
