@@ -9,7 +9,9 @@ const validationsRegister = require("../middlewares/registerValidations.js");
 const validationsLogin = require("../middlewares/loginValidations.js");
 
 /********** Views **********/
+router.get("/", usersController.list); //Nada, pendiente a definir
 router.get("/cuenta", usersController.account); //Nada, pendiente a definir
+router.get("/:id", usersController.profile); //Obtengo el usuario by pk??
 router.get('/login', usersController.login); //Formulario de login
 router.post('/login', usersController.processLogin); //Procesa el ingreso de una cuenta
 router.get("/registrarse", usersController.register); //Formulario de creación de cuenta

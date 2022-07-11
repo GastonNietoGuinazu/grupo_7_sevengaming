@@ -69,7 +69,14 @@ const usersController = {
   list: (req, res) => {
     db.Usuarios.findAll()
     .then(function(usuarios) {
+      console.log(usuarios, "TODOS LOS USUARIOS")
 res.render("usuarios", {usuarios:usuarios})
+    })
+  },
+  profile: (req, res) => {
+    db.Usuarios.findByPk(req.params.id)
+    .then(function(usuario) {
+      res.render("cuenta", {usuario:usuario} )
     })
   }
 };
