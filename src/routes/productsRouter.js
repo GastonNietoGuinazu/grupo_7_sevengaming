@@ -16,7 +16,7 @@ router.get('/edit/:id',uploadFile.single("imagen1"), productsController.edit); /
 router.get('/detail/:id', productsController.detail); //Detalle del producto 
 
 /********** CRUD productos **********/
-router.patch("/edit/:id", productsController.update); // Procesa la edición
+router.put("/edit/:id", productsController.update); // Procesa la edición
 router.get('/create', productsController.create); //Recibe lainformacion para la creacion
 router.post('/', productsController.store); //Crea y almacena el producto
 router.delete('/delete/:id', productsController.destroy); //Eliminación de un producto

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const res = require('express/lib/response'); 
-
+const db = require("../database/models");
 //Path productos
 const productsFilePath = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -30,7 +30,7 @@ const productsController = {
     },
     // Detalle
     detail: (req, res) => {
-        let productoId = req.params.num;
+        let productoId = req.params.id;
         res.send("Detalle del producto " + productoId);
     },
     // Creación - Formulario de creación
@@ -44,7 +44,12 @@ const productsController = {
     // Edición - Formulario de edición
 	edit: (req, res) => {
 		let id = req.params.id
-		let productToEdit = products.find(product => product.id == id)
+        const productToEdit = await db.findOne({ where: { id: `${req.query.params}` } });
+            if (productToEdit === null) {
+            console.log('Not found!');
+            } else {
+            console.log(productToEdit.title); 
+            }
 		res.render('ModificarProducto', {productToEdit})
 	},
     // Edición - Method de update
