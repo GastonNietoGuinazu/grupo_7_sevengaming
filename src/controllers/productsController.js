@@ -42,7 +42,7 @@ const productsController = {
 		res.send("Producto nuevo agregado");
 	},
     // Edición - Formulario de edición
-	edit: (req, res) => {
+	edit: async (req, res) => {
 		let id = req.params.id
         const productToEdit = await db.findOne({ where: { id: `${req.query.params}` } });
             if (productToEdit === null) {

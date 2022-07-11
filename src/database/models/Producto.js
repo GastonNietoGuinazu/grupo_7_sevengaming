@@ -25,12 +25,12 @@ module.exports = (sequelize, dataTypes) => {
     },
     image: {
       type: dataTypes.STRING,
-    },
+    }
   };
   let config = {
-    tableName: "users",
+    tableName: "products",
     timestamps: false,
   };
-  const Usuario = sequelize.define(alias, cols, config);
-  return Usuario;
+  const Producto = sequelize.define(alias, cols, config);
+  return Producto;
 };
