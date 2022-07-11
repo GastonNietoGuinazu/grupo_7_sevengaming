@@ -1,3 +1,4 @@
+const db = require("../database/models");
 const fs = require("fs");
 const path = require("path");
 const { check, validationResult } = require("express-validator");
@@ -65,6 +66,12 @@ const usersController = {
   register: (req, res) => {
     res.render("crearCuenta");
   },
+  list: (req, res) => {
+    db.Usuarios.findAll()
+    .then(function(usuarios) {
+res.render("usuarios", {usuarios:usuarios})
+    })
+  }
 };
 
 module.exports = usersController;

@@ -5,6 +5,7 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
+      unique: true,
     },
     first_name: {
       type: dataTypes.STRING,
@@ -14,10 +15,22 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.STRING,
       allowNull: false,
     },
-    email: {},
-    password: {},
-    categoryId: {},
-    image: {},
+    email: {
+      type: dataTypes.STRING,
+      allowNull: false,
+    },
+    password: {
+      type: dataTypes.STRING,
+      allowNull: false,
+      unique: true,
+    },
+    categoryId: {
+      type: dataTypes.INTEGER,
+      allowNull: false,
+    },
+    image: {
+      type: dataTypes.STRING,
+    },
   };
   let config = {
     tableName: "users",
