@@ -5,7 +5,7 @@ const methodOverride = require("method-override")
 // Instalando express-session
 const session = require('express-session');
 
-const db = require("./database/database");
+/* const db = require("./database/database");
 
 (async ()=> {
     try {
@@ -15,7 +15,7 @@ console.log('Conectados a la base de datos')
         throw new Error(error)
     }
 })();
-
+ */
 //similar a los recursos estaticos, es para evitar poner el path
 app.set('views',path.resolve(__dirname,'views'));
 //configuramos el motor de plantillas (EJS)
