@@ -17,7 +17,7 @@ router.get('/detail/:id', productsController.detail); //Detalle del producto
 
 /********** CRUD productos **********/
 router.put("/edit/:id", productsController.update); // Procesa la edición
-router.get('/create', productsController.create); //Recibe lainformacion para la creacion
+router.get('/create', productsController.create); //Recibe la informacion para la creacion
 router.post('/', productsController.store); //Crea y almacena el producto
 router.delete('/delete/:id', productsController.destroy); //Eliminación de un producto
 

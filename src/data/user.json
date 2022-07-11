@@ -24,7 +24,6 @@
   "phone number": "",
   "email": "gaston@gmail.com",
   "password": "$2b$10$Q5WCSZRSbDZnk5ZfOcRs3eVKt8sDov8BW3PfUsr0GAOcTU7TLLwie",
-  "password2": "123456admin"
  },
  {
   "id": 4,
@@ -33,7 +32,6 @@
   "phone number": "",
   "email": "Mari@gmail.com",
   "password": "$2b$10$sPyzEtILaluy3cvUrPCwK.EC1nVr3lCgq9AEW0GC3RpoHhYUoXw/a",
-  "password2": "123maria"
  },
  {
   "id": 5,
@@ -42,7 +40,6 @@
   "phone number": "",
   "email": "Mateo@hotmail.com",
   "password": "$2b$10$1B6gcB9aLihpQcs9eNVhp.hZlrIWvnJBNNKlkKikzwWe.ZXzRK/fK",
-  "password2": "789456123"
  },
  {
   "id": 6,
@@ -51,7 +48,6 @@
   "phone number": "",
   "email": "LuzAlcorta@msn.com",
   "password": "$2b$10$UOjWkKGKwPGif2nvcYXq1..hgbtH5hAEsOY3A59y9S8sTMMAqRBRW",
-  "password2": "luz123456"
  },
  {
   "id": 7,
@@ -60,7 +56,6 @@
   "phone number": "",
   "email": "juli73@gmail.com",
   "password": "$2b$10$pUiUtTxU7MJw3jHXs0TYO.EkQLwuKrIlrsU3TRZDosXMYBqBcfSIq",
-  "password2": "123@july"
  },
  {
   "id": 8,
@@ -69,7 +64,6 @@
   "phone number": "",
   "email": "Martin487@hotmail.com",
   "password": "$2b$10$xo9fbZA6V3G1PP0bOmpjlONESxQFa6AQmc0H8W/PuRRXTawR.WWJe",
-  "password2": "88888888"
  },
  {
   "id": 9,
@@ -78,7 +72,6 @@
   "phone number": "",
   "email": "VaGarcia@live.com",
   "password": "$2b$10$2luCU/QpL1UAiz/0d5/XzeT7A.mMqNdjQbEdy/mAcX/Wy/htQpCXe",
-  "password2": "753159"
  },
  {
   "id": 10,
@@ -87,6 +80,5 @@
   "phone number": "",
   "email": "joseHer15@gmail.com",
   "password": "$2b$10$At0gqV.JnJ7UWfWvKSR8Ue7HlzD1UwzVPjyDlW6vPX7Dkx8KrHXDG",
-  "password2": "123@jose15"
  }
 ]

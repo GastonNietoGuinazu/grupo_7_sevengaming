@@ -17,5 +17,4 @@ router.post('/login', usersController.processLogin); //Procesa el ingreso de una
 router.get("/registrarse", usersController.register); //Formulario de creación de cuenta
 router.post("/registrarse", usersController.processRegister); //Procesa la creacion de una cuenta
 
-
 module.exports = router;

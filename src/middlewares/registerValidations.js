@@ -5,7 +5,6 @@ const validationsRegister = [
     check("last_name"),
     check("email").isEmail().withMessage('Email inválido'), 
     check("password").isLength({ min: 8 }).withMessage('La contraseña debe tener al menos 8 caracteres'),
-    check("password2"),
 ];
 
 module.exports = validationsRegister;
