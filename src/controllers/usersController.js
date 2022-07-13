@@ -70,7 +70,7 @@ const usersController = {
     db.Usuarios.findAll()
     .then(function(usuarios) {
       console.log(usuarios, "TODOS LOS USUARIOS")
-res.render("usuarios", {usuarios:usuarios})
+      res.render("usuarios", {usuarios:usuarios})
     })
   },
   profile: (req, res) => {

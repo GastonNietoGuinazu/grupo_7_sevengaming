@@ -39,7 +39,14 @@ const productsController = {
 	},
     // Creación - Method de store
 	store: (req, res) => {
-		res.send("Producto nuevo agregado");
+		db.Productos.create({
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            email: req.body.email,
+            password: req.body.password,
+            image: req.body.image,
+        });
+        res.send("Producto agregado!!!");
 	},
     // Edición - Formulario de edición
 	edit: async (req, res) => {
