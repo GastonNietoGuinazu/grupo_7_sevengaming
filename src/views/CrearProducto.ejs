@@ -24,9 +24,8 @@
                     </div>
                     <div class="nombre--distribucion">
                         <label for="pwd">descripcion</label><br>
-                        <textarea rows="15" cols="60" name="desripcion">
-Ingrese descripcion del producto...
-                </textarea><br>
+                        <textarea rows="15" cols="60" name="desripcion"
+                            placeholder="Ingrese descripcion del producto..."></textarea><br>
                         <label>agregar imagen</label><br>
                         <input type="file" name='imagen1' /><br>
                         <input type="submit" name="subir-imagen" value="enviar imagen" />
@@ -46,14 +45,12 @@ Ingrese descripcion del producto...
                 </select><br>
                 <label for="precio">precio</label><br>
                 <input type="price" id="prc" name="prc">
-            </form>
-
-
-            <div class="create--acount">
-                <button class="botom--format" type="button" onclick="alert('cuenta creada!')">Agregar</button>
-                <div class="data">
+                <div class="create--acount">
+                    <button class="botom--format" type="submit">Agregar</button>
+                    <div class="data">
+                    </div>
                 </div>
-            </div>
+            </form>
         </main>
         <!-- Footer -->
         <%- include('partials/footer') %>

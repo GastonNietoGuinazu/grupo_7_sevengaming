@@ -12,14 +12,15 @@ router.get("/carrito", productsController.carrito); //Vista de la selección de 
 router.get("/productList", productsController.productList); //Vista lista de productos
 router.get("/productDetail", productsController.productDetail); //Vista detalle del producto
 router.get("/modificarProducto", productsController.editProduct) //Vista del modificador de productos
-router.get("/crearProducto", productsController.crearProducto); //Formulario de creación de productos
+router.get("/crearProducto", productsController.crearProducto); //Vista del formulario de creación de productos
+router.post('/crearProducto', productsController.store); //Crea y almacena el producto
 router.get('/edit/:id',uploadFile.single("imagen1"), productsController.edit); //Formulario de edición de productos
 router.get('/detail/:id', productsController.detail); //Detalle del producto 
 
 /********** CRUD productos **********/
 router.put("/edit/:id", productsController.update); // Procesa la edición
 router.get('/create', productsController.create); //Recibe la informacion para la creacion
-router.post('/', productsController.store); //Crea y almacena el producto
+
 router.delete('/delete/:id', productsController.destroy); //Eliminación de un producto
 
 module.exports = router;
