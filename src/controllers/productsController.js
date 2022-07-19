@@ -20,6 +20,9 @@ const productsController = {
     crearProducto: (req, res) => {
         res.render("crearProducto")
     },
+    editProduct:(req, res) =>{
+        res.render("modificarProducto")
+    },
     // Compra
     buy: (req, res) => {
         res.send("Compra exitosa")
