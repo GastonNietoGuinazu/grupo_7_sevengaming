@@ -43,11 +43,11 @@ const productsController = {
     // Creación - Method de store
 	store: (req, res) => {
 		db.Productos.create({
-            first_name: req.body.first_name,
-            last_name: req.body.last_name,
-            email: req.body.email,
-            password: req.body.password,
-            image: req.body.image,
+            name: req.body.username,
+            price: req.body.prc,
+            categoryId: req.body.categotria,
+            description: req.body.desripcion,
+            image: req.body.imagen1,
         });
         res.send("Producto agregado!!!");
 	},
