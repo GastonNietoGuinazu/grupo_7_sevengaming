@@ -14,6 +14,7 @@ const usersController = {
     res.render("login");
   },
   processRegister: (req, res) => {
+    console.log(req.body)
     const resultValidations = validationResult(req);
     if (resultValidations.errors.length > 0) {
       return res.render("crearCuenta", {
@@ -78,7 +79,7 @@ const usersController = {
     .then(function(usuario) {
       res.render("cuenta", {usuario:usuario} )
     })
-  }
+  },
 };
 
 module.exports = usersController;

@@ -80,5 +80,14 @@
   "phone number": "",
   "email": "joseHer15@gmail.com",
   "password": "$2b$10$At0gqV.JnJ7UWfWvKSR8Ue7HlzD1UwzVPjyDlW6vPX7Dkx8KrHXDG"
+ },
+ {
+  "id": 11,
+  "first_name": "hola",
+  "last_name": "",
+  "phone number": "",
+  "email": "",
+  "password": "$2b$10$zUP3cp22GBxemPRXEIKSjOI0SHzKUSoh9Sq53qEsUNGqzrQCxizFW",
+  "password2": ""
  }
 ]

@@ -1,10 +1,10 @@
 const fs = require('fs');
 const path = require('path');
-const res = require('express/lib/response'); 
+//const res = require('express/lib/response'); 
 const db = require("../database/models");
 //Path productos
-const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+/* const productsFilePath = path.join(__dirname, '../data/products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); */
 
 const productsController = {
 
@@ -17,9 +17,9 @@ const productsController = {
     productDetail: (req, res) => {
         res.render("productDetail")
     },
-    crearProducto: (req, res) => {
+    /* crearProducto: (req, res) => {
         res.render("crearProducto")
-    },
+    }, */
     editProduct:(req, res) =>{
         res.render("modificarProducto")
     },
@@ -42,14 +42,14 @@ const productsController = {
 	},
     // Creación - Method de store
 	store: (req, res) => {
-		db.Productos.create({
+		/* db.Productos.create({
             name: req.body.username,
             price: req.body.prc,
             categoryId: req.body.categotria,
             description: req.body.desripcion,
             image: req.body.imagen1,
-        });
-        res.send("Producto agregado!!!");
+        }); */
+        //res.send("Producto agregado!!!");
 	},
     // Edición - Formulario de edición
 	edit: async (req, res) => {
@@ -70,8 +70,17 @@ const productsController = {
 	// Eliminar  
 	destroy : (req, res) => {
 		let id = req.params.id;
+        db.Productos.destroy({
+            where: {id:id}
+        });
 		res.send("Producto con id " + id + " eliminado");
-	}
+	},
+    add: (req,res) => {
+        res.render("formCreateProduct");
+    },
+    createProduct: (req,res) => {
+        console.log(req.body);
+    }
 }
 
 module.exports = productsController;
