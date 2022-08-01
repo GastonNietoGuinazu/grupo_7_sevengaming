@@ -29,14 +29,12 @@ app.use(session({secret:'Secreto', resave: false, saveUninitialized: true,})); /
 const productsRouter = require("./routes/productsRouter.js")
 const usersRouter = require("./routes/usersRouter.js")
 const homeRouter = require("./routes/homeRouter.js");
-const pruebaRouter = require("./routes/pruebaRouter.js");
 
 /* const db = require('./database/database.js'); */
 
 app.use("/productos", productsRouter);
 app.use("/usuarios", usersRouter);
 app.use("/", homeRouter);
-app.use("/prueba", pruebaRouter);
 
 app.listen(3012,()=>{
     console.log('servidor corriendo en http://localhost:3012');

@@ -69,6 +69,12 @@ const usersController = {
         res.render("cuenta", { usuario: usuario })
       })
   },
+  formUser:(req,res) => {
+    res.render("modificarUsuario");
+  },
+  edit:(req,res) => {
+    
+  }
 };
 
 module.exports = usersController;
