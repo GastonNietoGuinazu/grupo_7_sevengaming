@@ -4,44 +4,33 @@ const path = require("path");
 const { check, validationResult } = require("express-validator");
 const bcrypt = require("bcrypt");
 const usersFilePath = path.join(__dirname, "../data/user.json"); //Path usuarios
-/*const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));*/
+
 /* REQUIRIENDO MODULO DE USUARIOS */
 /* const User = require('../models/User'); */
-const register = require("../models/register");
+/* const register = require("../models/register"); */
+/* const { INSERT } = require("sequelize/types/query-types") */;
 
 const usersController = {
   login: (req, res) => {
     res.render("login");
   },
   processRegister: (req, res) => {
-    console.log(req.body)
-    const resultValidations = validationResult(req);
-    if (resultValidations.errors.length > 0) {
-      return res.render("crearCuenta", {
-        errors: resultValidations.mapped(),
-        oldData: req.body
+    db.Usuarios.create({
+      first_name: req.body.first_name,
+      last_name: req.body.last_name,
+      email: req.body.email,
+      password: req.body.password,
+      categoryId: req.body.categoryId,
+      image: req.body.image,
+    })
+      .then(movies => {
+        res.redirect("/usuarios/login");
       })
-    }
-    let userInDB = register.findByField("email", req.body.email);
-    if (userInDB) {
-      return res.render("crearCuenta", {
-        errors: {
-          email: { msg: "Este email ya esta registrado" }
-        },
-        oldData: req.body
-      })
-    }
-    let userToCreate = {
-      ...req.body,
-      password: bcrypt.hashSync(req.body.password, 10),
-    }
-    let userCreated = register.create(userToCreate);
-    return res.redirect("/usuarios/login");
   },
   processLogin: function (req, res) {
     let errors = validationResult(req);
     if (errors.isEmpty()) {
-      let users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
+      let users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"))
       let usuarioLoguear;
       for (let i = 0; i < users.length; i++) {
         if (users[i].email == req.body.email) {
@@ -69,16 +58,16 @@ const usersController = {
   },
   list: (req, res) => {
     db.Usuarios.findAll()
-    .then(function(usuarios) {
-      console.log(usuarios, "TODOS LOS USUARIOS")
-      res.render("usuarios", {usuarios:usuarios})
-    })
+      .then(function (usuarios) {
+        console.log(usuarios, "TODOS LOS USUARIOS")
+        res.render("usuarios", { usuarios: usuarios })
+      })
   },
   profile: (req, res) => {
     db.Usuarios.findByPk(req.params.id)
-    .then(function(usuario) {
-      res.render("cuenta", {usuario:usuario} )
-    })
+      .then(function (usuario) {
+        res.render("cuenta", { usuario: usuario })
+      })
   },
 };
 

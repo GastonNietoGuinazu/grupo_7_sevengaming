@@ -89,5 +89,14 @@
   "email": "",
   "password": "$2b$10$zUP3cp22GBxemPRXEIKSjOI0SHzKUSoh9Sq53qEsUNGqzrQCxizFW",
   "password2": ""
+ },
+ {
+  "id": 12,
+  "first_name": "Ana",
+  "last_name": "Sanchez",
+  "phone number": "",
+  "email": "ana@gmail.com",
+  "password": "$2b$10$wXuCUeMOgQapS3Tihfqdfeln2ww1rs9f/1uXWxh1l1rwmoMZXy0l6",
+  "password2": ""
  }
 ]

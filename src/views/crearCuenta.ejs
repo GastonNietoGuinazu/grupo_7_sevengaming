@@ -58,10 +58,6 @@
                             <% } %>
                     </div>
                     <div class="name-container">
-                        <label class="label-name" for="nombre">Número de teléfono (Opcional)</label>
-                        <input class="input-name" type="text" name="phone number" id="" placeholder="Teléfono">
-                    </div>
-                    <div class="name-container">
                         <label class="label-name" for="email">Email</label>
                         <input class="input-name" type="email" name="email" id="" placeholder="Email">
                         <% if (locals.error && erros.email) { %>
@@ -80,9 +76,15 @@
                             <% } %>
                     </div>
                     <div class="name-container">
-                        <label class="label-name" for="contraseña2">Confirmar contraseña</label>
-                        <input class="input-name" type="password" name="password2" id=""
-                            placeholder="Confirmar contraseña">
+                        <label class="label-name" for="nombre">Categoria</label>
+                        <select class="input-name" id="categoria" name="categoryId">
+                            <option value="1">Adminitrador</option>
+                            <option value="2">Cliente</option>
+                        </select>
+                    </div>
+                    <div class="name-container">
+                        <label class="label-name" for="contraseña2">Imagen</label>
+                        <input class="input-name" type="file" name="image" id="">
                         <% if (locals.error && erro.contraseña2) { %>
                             <div class="invalid-text">
                                 <%= errors.contraseña2.msg %>
@@ -94,11 +96,11 @@
                 <form class="form-humano" action="" method="post">
                     <input class="checkbox" type="checkbox"><label class="texto-robot" for="">No soy un
                         robot</label><img class="logo-captcha" src="/public/img/captcha.png" alt="captcha">
-                        <div class="create--acount">
-                            <div class="data">
-                                <p>Ya tienes una cuenta?<a href="/usuarios/login"><i>Inicia sesión</i></a></p>
-                            </div>
+                    <div class="create--acount">
+                        <div class="data">
+                            <p>Ya tienes una cuenta?<a href="/usuarios/login"><i>Inicia sesión</i></a></p>
                         </div>
+                    </div>
                 </form>
             </div>
         </div>

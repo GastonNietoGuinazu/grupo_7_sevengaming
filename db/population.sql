@@ -18,7 +18,7 @@ INSERT INTO DbSevenGaming.categoryProducts (id, category) VALUES
 (1, "Juegos"), (2, "Libros"), (3, "Accesorios");
 -- categoryUsers --
 INSERT INTO DbSevenGaming.categoryUsers (id, category) VALUES
-(1, "Administradores"), (2, "Clientes");
+(1, "Administrador"), (2, "Cliente");
 -- products --
 INSERT INTO DbSevenGaming.products (id, name, price, categoryId, description, image) VALUES 
 (1, "FORTNITE", 100, 1, "Entrega del tercer capitulo del famoso shooter FORTNITE.", "fortnite-1.webp"), 
