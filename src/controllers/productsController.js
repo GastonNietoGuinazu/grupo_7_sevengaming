@@ -17,9 +17,9 @@ const productsController = {
     productDetail: (req, res) => {
         res.render("productDetail")
     },
-    /* crearProducto: (req, res) => {
+    crearProducto: (req, res) => {
         res.render("crearProducto")
-    }, */
+    },
     editProduct:(req, res) =>{
         res.render("modificarProducto")
     },
@@ -38,18 +38,18 @@ const productsController = {
     },
     // Creación - Formulario de creación
 	create: (req, res) => {
-		res.render('product-create')
+		
 	},
     // Creación - Method de store
 	store: (req, res) => {
-		/* db.Productos.create({
+		db.Productos.create({
             name: req.body.username,
             price: req.body.prc,
             categoryId: req.body.categotria,
             description: req.body.desripcion,
             image: req.body.imagen1,
-        }); */
-        //res.send("Producto agregado!!!");
+        });
+        res.send("Producto agregado!!!");
 	},
     // Edición - Formulario de edición
 	edit: async (req, res) => {
@@ -78,9 +78,6 @@ const productsController = {
     add: (req,res) => {
         res.render("formCreateProduct");
     },
-    createProduct: (req,res) => {
-        console.log(req.body);
-    }
 }
 
 module.exports = productsController;
