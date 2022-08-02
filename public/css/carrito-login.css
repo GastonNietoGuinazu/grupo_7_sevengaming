@@ -114,16 +114,19 @@ header {
 
 .titulo-2 {
     padding: 1em;
+    text-align: center;
 }
 .login {
     padding-top: 1em;
     padding-left: 1em;
     padding-right: 1em;
+    text-align: center;
 }
 .repo-contraseña {
   padding-left: 1em;
   padding-right: 1em;
   padding-bottom: 1em;
+  text-align: center;
 }
 .iniciar-sesion {
     padding: 1em;
@@ -136,4 +139,5 @@ header {
 }
 .crear-cuenta {
     color: blue;
+    padding-left: 5px;
 }

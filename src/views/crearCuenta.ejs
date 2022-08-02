@@ -69,7 +69,7 @@
                     <div class="name-container">
                         <label class="label-name" for="contraseña">Contraseña</label>
                         <input class="input-name" type="password" name="password" id="" placeholder="Contraseña">
-                        <% if (locals.error && erro.contraseña) { %>
+                        <% if (locals.error && errors.contraseña) { %>
                             <div class="invalid-text">
                                 <%= errors.contraseña.msg %>
                             </div>
@@ -78,7 +78,7 @@
                     <div class="name-container">
                         <label class="label-name" for="nombre">Categoria</label>
                         <select class="input-name" id="categoria" name="categoryId">
-                            <option value="1">Adminitrador</option>
+                            <option value="1">Administrador</option>
                             <option value="2">Cliente</option>
                         </select>
                     </div>
