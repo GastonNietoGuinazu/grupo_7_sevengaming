@@ -21,7 +21,7 @@ const productsController = {
         res.render("crearProducto")
     },
     editProduct:(req, res) =>{
-        res.render("modificarProducto")
+        res.render("modificarProducto") 
     },
     // Compra
     buy: (req, res) => {
@@ -31,15 +31,6 @@ const productsController = {
     sell: (req, res) => {
         res.send("Venta exitosa")
     },
-    // Detalle
-    detail: (req, res) => {
-        let productoId = req.params.id;
-        res.send("Detalle del producto " + productoId);
-    },
-    // Creación - Formulario de creación
-	create: (req, res) => {
-		
-	},
     // Creación - Method de store
 	store: (req, res) => {
 		db.Productos.create({
@@ -51,7 +42,7 @@ const productsController = {
         });
         res.send("Producto agregado!!!");
 	},
-    // Edición - Formulario de edición
+    // Edición del producto
 	edit: async (req, res) => {
 		let id = req.params.id
         const productToEdit = await db.findOne({ where: { id: `${req.query.params}` } });
@@ -62,8 +53,8 @@ const productsController = {
             }
 		res.render('ModificarProducto', {productToEdit})
 	},
-    // Edición - Method de update
-	update: (req, res) => {
+    //Alternativa del detalle de un producto
+	detail: (req, res) => {
 		let id = req.params.id
 		res.send("Producto con id " + id + " editado");
 	},
@@ -75,9 +66,6 @@ const productsController = {
         });
 		res.send("Producto con id " + id + " eliminado");
 	},
-    add: (req,res) => {
-        res.render("formCreateProduct");
-    },
 }
 
 module.exports = productsController;
