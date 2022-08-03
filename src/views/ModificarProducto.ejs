@@ -16,45 +16,46 @@
     <!-- Header -->
     <%- include('partials/header') %>
         <main class="main__distribution">
-            <h1 class="title--format">editar producto </h1>
+            <h1 class="title--format">Editar Producto</h1>
             <form action="/productos/edit/:id?_method=DELETE" method="post" class="form--format">
                 <div class="nombre--format">
                     <div class="nombre--distribucion">
-                        <label for="username">Seleccione producto</label><br>
-                        <select id="productoe" name="producto"> <br>
-                            <option value="producto1">producto1</option>
-                            <option value="producto2">producto2</option>
-                            <option value="producto3">producto3</option>
-                            <option value="producto X">productoX</option>
+                        <label for="username">Seleccione el producto</label>
+                        <select id="productoe" name="producto">
+                            <option value="1">FORTNITE</option>
+                            <option value="2">Hogwarts Legacy</option>
+                            <option value="3">Horizon Forbidden West</option>
                         </select>
-                    </div><br>
+                    </div>
+                    <div>
+                        <label for="precio">Nombre</label>
+                        <input type="text" id="prc" name="prc">
+                    </div>
+                    <div>
+                        <label for="precio">Precio</label>
+                        <input type="price" id="prc" name="prc">
+                    </div>
+                    <div>
+                        <label for="username">Categorias</label>
+                        <select id="categoria" name="categotria">
+                            <option value="1">Juegos</option>
+                            <option value="2">Libros</option>
+                            <option value="3">Accesorios</option>
+                        </select>
+                    </div>
                     <div class="nombre--distribucion">
-                        <label for="pwd">descripcion</label><br>
-                        <textarea rows="15" cols="60" name="desripcion"
-                            placeholder="Ingrese descripcion del producto..."></textarea><br>
+                        <label for="pwd">Descripcion</label>
+                        <textarea rows="5" cols="60" name="desripcion"
+                            placeholder="Ingrese descripcion del producto..."></textarea>
                         <!-- <label>Modificar imagen</label><br>//Logica planteada para agregar imagenes pero no funciona por un mal funcionamiento del enctype.
                         <input type="file" name='imagen1' /><br>
                         <input type="submit" name="subir-imagen" value="enviar imagen" /> -->
                     </div>
                 </div>
-                <label for="username">categoria</label><br>
-                <select id="categoria" name="categotria"> <br>
-                    <option value="Juego">Juego</option>
-                    <option value="Disfraz">Disfraz</option>
-                    <option value="Artilugio">Artilugio</option>
-                </select>
-                <label for="username">tematica</label><br>
-                <select id="tematica" name="tematica"> <br>
-                    <option value="Destiny">Destiny</option>
-                    <option value="LOL">LOL</option>
-                    <option value="CSS">CSS</option>
-                </select><br>
-                <label for="precio">Actualizar precio</label><br>
-                <input type="price" id="prc" name="prc">
             </form>
 
             <div class="create--acount">
-                <button class="botom--format" type="button" onclick="alert('cuenta creada!')">Agregar</button>
+                <button class="botom--format" type="button" onclick="alert('cuenta creada!')">Actualizar</button>
                 <div class="data">
                 </div>
             </div>
