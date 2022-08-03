@@ -42,12 +42,12 @@ body {
   width: 120px;
 }
 .container {
-  position:relative;
   height: 300px;
   width: 900px;
   bottom: 20px;
-  left: calc(50% - 300px);
+  left: 100px;
   display: flex;
+  justify-content: center;
 }
 
 .card {
@@ -749,7 +749,6 @@ footer {
     font-weight: 200;
   }
   .container {
-    width: 130vw;
     height: 100%;
   }
 
