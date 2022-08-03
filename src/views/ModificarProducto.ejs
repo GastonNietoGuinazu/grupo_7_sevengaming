@@ -16,37 +16,37 @@
     <!-- Header -->
     <%- include('partials/header') %>
         <main class="main__distribution">
-            <h1 class="title--format">Editar Producto</h1>
+            <h1 class="title--format">Editar el producto:  <%= product.name %></h1>
             <form action="/productos/edit/:id?_method=DELETE" method="post" class="form--format">
                 <div class="nombre--format">
-                    <div class="nombre--distribucion">
+                    <!-- <div class="nombre--distribucion">
                         <label for="username">Seleccione el producto</label>
                         <select id="productoe" name="producto">
                             <option value="1">FORTNITE</option>
                             <option value="2">Hogwarts Legacy</option>
                             <option value="3">Horizon Forbidden West</option>
                         </select>
-                    </div>
+                    </div> -->
                     <div>
                         <label for="precio">Nombre</label>
-                        <input type="text" id="prc" name="prc">
+                        <input type="text" id="prc" name="prc" value=" <%= product.name %>">
                     </div>
                     <div>
                         <label for="precio">Precio</label>
-                        <input type="price" id="prc" name="prc">
+                        <input type="price" id="prc" name="prc" value=<%= product.price %>>
                     </div>
                     <div>
                         <label for="username">Categorias</label>
                         <select id="categoria" name="categotria">
-                            <option value="1">Juegos</option>
-                            <option value="2">Libros</option>
-                            <option value="3">Accesorios</option>
+                            <option value=<%= product.categoryId %>>Juegos</option>
+                            <option value=<%= product.categoryId %>>Libros</option>
+                            <option value=<%= product.categoryId %>>Accesorios</option>
                         </select>
                     </div>
                     <div class="nombre--distribucion">
                         <label for="pwd">Descripcion</label>
                         <textarea rows="5" cols="60" name="desripcion"
-                            placeholder="Ingrese descripcion del producto..."></textarea>
+                            placeholder="Ingrese descripcion del producto..."><%= product.description %></textarea>
                         <!-- <label>Modificar imagen</label><br>//Logica planteada para agregar imagenes pero no funciona por un mal funcionamiento del enctype.
                         <input type="file" name='imagen1' /><br>
                         <input type="submit" name="subir-imagen" value="enviar imagen" /> -->
@@ -55,7 +55,7 @@
             </form>
 
             <div class="create--acount">
-                <button class="botom--format" type="button" onclick="alert('cuenta creada!')">Actualizar</button>
+                <button class="botom--format" type="button">Actualizar</button>
                 <div class="data">
                 </div>
             </div>

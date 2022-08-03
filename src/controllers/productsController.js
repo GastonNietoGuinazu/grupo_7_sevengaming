@@ -45,18 +45,30 @@ const productsController = {
     // Edición del producto
 	edit: async (req, res) => {
 		let id = req.params.id
-        const productToEdit = await db.findOne({ where: { id: `${req.query.params}` } });
+        db.Productos.findByPk(id)
+            .then(product => {
+                return res.render('modificarProducto', { product })
+            });
+        /* const productToEdit = await db.findOne({ where: { id: `${req.query.params}` } });
             if (productToEdit === null) {
             console.log('Not found!');
             } else {
             console.log(productToEdit.title); 
             }
-		res.render('ModificarProducto', {productToEdit})
+		res.render('ModificarProducto', {productToEdit}) */
 	},
+    list: (req, res) => {
+        db.Productos.findAll()
+            .then(products => {
+                res.render('listaProductos.ejs', {products})
+            })
+    },
     //Alternativa del detalle de un producto
 	detail: (req, res) => {
-		let id = req.params.id
-		res.send("Producto con id " + id + " editado");
+		db.Productos.findByPk(req.params.id)
+            .then(product => {
+                res.render('detalleProducto.ejs', {product});
+            });
 	},
 	// Eliminar  
 	destroy : (req, res) => {

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title><%= product.name %> </title>
+    <link rel='stylesheet' href='/css/style.css' />
+
+</head>
+<body>  
+    <h1><%= product.name %> </h1>
+    <br>
+    <p>Precio: <%= product.price %> </p>
+    <p>Categoria: <%= product.categoryId %> </p>
+    <p>Description: <%= product.description %> </p>
+    <p><a href="/productos/editarProducto/<%= product.id%>"><button>Editar Producto</button></a></p>
+</body>
+</html>

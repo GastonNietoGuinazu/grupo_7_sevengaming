@@ -23,18 +23,19 @@ const usersController = {
       categoryId: req.body.categoryId,
       image: req.body.image,
     })
-      .then(movies => {
+      .then(() => {
         res.redirect("/usuarios/login");
       })
+      .catch(error => res.send(error))
   },
   processLogin: function (req, res) {
-    let errors = validationResult(req);
+    /* let errors = validationResult(req);
     if (errors.isEmpty()) {
       let users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"))
       let usuarioLoguear;
       for (let i = 0; i < users.length; i++) {
         if (users[i].email == req.body.email) {
-          if /* (bcrypt.compareSync(req.body.password, users[i].password)) */(req.body.password == users[i].password) {
+          if (bcrypt.compareSync(req.body.password, users[i].password))(req.body.password == users[i].password) {
             usuarioLoguear = users[i];
           }
         }
@@ -48,7 +49,11 @@ const usersController = {
       res.redirect("/");
     } else {
       return res.render("login", { errors: errors.errors });
-    }
+    } */
+    db.Usuarios.findOne(req.body.email)
+    .then( () => {
+
+    })
   },
   account: (req, res) => {
     res.render("cuenta");
