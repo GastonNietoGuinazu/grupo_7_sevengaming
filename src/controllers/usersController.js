@@ -52,7 +52,7 @@ const usersController = {
     } */
     db.Usuarios.findOne(req.body.email)
     .then( () => {
-
+      
     })
   },
   account: (req, res) => {

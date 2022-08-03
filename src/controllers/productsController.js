@@ -20,8 +20,8 @@ const productsController = {
     crearProducto: (req, res) => {
         res.render("crearProducto")
     },
-    editProduct:(req, res) =>{
-        res.render("modificarProducto") 
+    editProduct: (req, res) => {
+        res.render("modificarProducto")
     },
     // Compra
     buy: (req, res) => {
@@ -32,8 +32,8 @@ const productsController = {
         res.send("Venta exitosa")
     },
     // Creación - Method de store
-	store: (req, res) => {
-		db.Productos.create({
+    store: (req, res) => {
+        db.Productos.create({
             name: req.body.username,
             price: req.body.prc,
             categoryId: req.body.categotria,
@@ -41,43 +41,53 @@ const productsController = {
             image: req.body.imagen1,
         });
         res.send("Producto agregado!!!");
-	},
+    },
     // Edición del producto
-	edit: async (req, res) => {
-		let id = req.params.id
+    editProduct: (req, res) => {
+        let id = req.params.id
         db.Productos.findByPk(id)
             .then(product => {
+                console.log(product)
                 return res.render('modificarProducto', { product })
             });
-        /* const productToEdit = await db.findOne({ where: { id: `${req.query.params}` } });
-            if (productToEdit === null) {
-            console.log('Not found!');
-            } else {
-            console.log(productToEdit.title); 
-            }
-		res.render('ModificarProducto', {productToEdit}) */
-	},
+    },
+    edit: (req, res) => {
+        let productId = req.params.id;
+        console.log(productId)
+        db.Productos.update({
+            name: req.body.name,
+            price: req.body.price,
+            categoryId: req.body.category,
+            description: req.body.description
+        }, {
+            where: { id: productId }
+        }) 
+            .then(() => {
+                return res.redirect("/productos/productsList");
+            })
+            .catch(error => res.send(error))  
+    },
     list: (req, res) => {
         db.Productos.findAll()
             .then(products => {
-                res.render('listaProductos.ejs', {products})
+                res.render('listaProductos.ejs', { products })
             })
     },
     //Alternativa del detalle de un producto
-	detail: (req, res) => {
-		db.Productos.findByPk(req.params.id)
+    detail: (req, res) => {
+        db.Productos.findByPk(req.params.id)
             .then(product => {
-                res.render('detalleProducto.ejs', {product});
+                res.render('detalleProducto.ejs', { product });
             });
-	},
-	// Eliminar  
-	destroy : (req, res) => {
-		let id = req.params.id;
+    },
+    // Eliminar  
+    destroy: (req, res) => {
+        let id = req.params.id;
         db.Productos.destroy({
-            where: {id:id}
+            where: { id: id }
         });
-		res.send("Producto con id " + id + " eliminado");
-	},
+        res.send("Producto con id " + id + " eliminado");
+    },
 }
 
 module.exports = productsController;

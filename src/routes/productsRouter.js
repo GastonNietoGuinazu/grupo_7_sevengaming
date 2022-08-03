@@ -15,8 +15,8 @@ router.get("/productsList", productsController.list); //Vista de lista de produc
 router.get("/detail/:id", productsController.detail); //Detalle del producto, una alternativa de la vista de detalle
 router.get("/crearProducto", productsController.crearProducto); //Formulario de creación de productos
 router.post("/crearProducto", productsController.store); //Crea y almacena el producto
-router.get("/editarProducto/:id", productsController.edit) //Formulario de edición de productos
-router.post("/editarProducto/:id", productsController.edit); //Procesa la edición del producto
+router.get("/editarProducto/:id", productsController.editProduct) //Formulario de edición de productos
+router.post("/edit/:id", productsController.edit); //Procesa la edición del producto
 router.delete("/eliminar/:id", productsController.destroy); //Eliminación de un producto
 
 module.exports = router;
