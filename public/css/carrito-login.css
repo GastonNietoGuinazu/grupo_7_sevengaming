@@ -82,9 +82,8 @@ header {
     margin: 2em;
 }
 .cuadrado {
-    background-color: aqua;
-    width: 4em;
-    height: 4em;
+    width: 6em;
+    height: 6em;
 }
 .descripción {
     margin-left: 3em;
