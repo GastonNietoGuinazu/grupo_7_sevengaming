@@ -47,13 +47,11 @@ const productsController = {
         let id = req.params.id
         db.Productos.findByPk(id)
             .then(product => {
-                console.log(product)
                 return res.render('modificarProducto', { product })
             });
     },
     edit: (req, res) => {
         let productId = req.params.id;
-        console.log(productId)
         db.Productos.update({
             name: req.body.name,
             price: req.body.price,
@@ -80,13 +78,24 @@ const productsController = {
                 res.render('detalleProducto.ejs', { product });
             });
     },
+    // Formulario eliminación
+    delete: (req, res) => {
+        let productID = req.params.id;
+        db.Productos.findByPk(productID)
+        .then(product => {
+            res.render("productDeleted", {product});
+        })
+    },
     // Eliminar  
     destroy: (req, res) => {
         let id = req.params.id;
         db.Productos.destroy({
-            where: { id: id }
-        });
-        res.send("Producto con id " + id + " eliminado");
+            where: { id: id }, forcer: true
+        })
+        .then(() => {
+            return res.redirect("/productos/productsList");
+        })
+        .catch(error => res.send(error)) 
     },
 }
 
