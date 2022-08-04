@@ -6,8 +6,7 @@ const bcrypt = require("bcrypt");
 const usersFilePath = path.join(__dirname, "../data/user.json"); //Path usuarios
 
 /* REQUIRIENDO MODULO DE USUARIOS */
-/* const User = require('../models/User'); */
-/* const register = require("../models/register"); */
+const User = require("../models/register");
 /* const { INSERT } = require("sequelize/types/query-types") */;
 
 const usersController = {
@@ -28,14 +27,15 @@ const usersController = {
       })
       .catch(error => res.send(error))
   },
-  processLogin: function (req, res) {
-    /* let errors = validationResult(req);
+  processLogin:(req, res) => {
+  let errors = validationResult(req);
     if (errors.isEmpty()) {
-      let users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"))
+      let users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
       let usuarioLoguear;
       for (let i = 0; i < users.length; i++) {
         if (users[i].email == req.body.email) {
-          if (bcrypt.compareSync(req.body.password, users[i].password))(req.body.password == users[i].password) {
+          let okPassword = bcrypt.compareSync(req.body.password, users[i].password);
+          if (okPassword) {
             usuarioLoguear = users[i];
           }
         }
@@ -46,14 +46,10 @@ const usersController = {
         });
       }
       req.session.usuarioLogueado = usuarioLoguear;
-      res.redirect("/");
+      res.redirect("/"); 
     } else {
       return res.render("login", { errors: errors.errors });
-    } */
-    db.Usuarios.findOne(req.body.email)
-    .then( () => {
-      
-    })
+    }
   },
   account: (req, res) => {
     res.render("cuenta");
@@ -79,6 +75,10 @@ const usersController = {
   },
   edit:(req,res) => {
     
+  },
+  logout: (req, res) => {
+    req.session.destroy
+    return res.redirect("/")
   }
 };
 
