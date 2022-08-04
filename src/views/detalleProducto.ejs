@@ -7,6 +7,7 @@
 
 </head>
 <body>  
+    <%- include('partials/header') %>
     <h1><%= product.name %> </h1>
     <br>
     <p>Precio: <%= product.price %> </p>
@@ -14,5 +15,6 @@
     <p>Description: <%= product.description %> </p>
     <p><a href="/productos/editarProducto/<%= product.id%>"><button>Editar Producto</button></a></p>
     <p><a href="/productos/eliminar/<%= product.id%>"><button>Borrar Producto</button></a></p>
+    <%- include('partials/footer') %>
 </body>
 </html>
