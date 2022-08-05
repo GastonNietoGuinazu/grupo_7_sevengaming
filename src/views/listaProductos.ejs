@@ -23,17 +23,25 @@
     <link rel="stylesheet" href="/css/listaProductos.css" />
     <title>Listado de productos</title>
   </head>
-
-  <body>
-    <h1>LISTADO DE PRODUCTOS</h1>
-    <ul>
-      <% for( let i = 0; i < products.length; i++ ) { %>
-      <li>
-        <a href="/productos/detail/<%= products[i].id %>"
-          ><%= products[i].name %></a
-        >
-      </li>
-      <% } %>
-    </ul>
-  </body>
+  
+  <%- include('partials/header') %>
+  <body class="body-productos">
+    <!-- <div class="cards"> -->
+      <div class="container-prueba">
+        <h1 class="listado-productos">LISTADO DE PRODUCTOS</h1> 
+        <div class="cards-container">
+        <ul class="items-container">
+          <% for( let i = 0; i < products.length; i++ ) { %>
+            <li class="items">
+              <a class="item-text" href="/productos/detail/<%= products[i].id %>"
+                ><%= products[i].name %></a
+                >
+              </li>
+              <% } %>
+            </ul>
+          </div>
+          </div>
+  <!-- </div> -->
+</body>
+<%- include('partials/footer') %>
 </html>
