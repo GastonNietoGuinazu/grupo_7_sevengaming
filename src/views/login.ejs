@@ -28,40 +28,42 @@
             </ul>
         <% } %>
             <section>
-                <form action="/usuarios/login" method="post">
+                <div class="contenedor-login">
+                <form class="form-completo" action="/usuarios/login" method="post">
                     <div class="titulo-2">
                         <h3>Iniciar Sesión</h3>
                     </div>
-
+                    
                     <article class="login">
                         <p>Email</p>
                         <div>
                             <input type="email" name="email">
                         </div>
                     </article>
-
+                    
                     <article class="login">
                         <p>Contraseña</p>
                         <div>
                             <input type="password" name="password">
                         </div>
                     </article>
-
+                    
                     <div class="repo-contraseña">
-                        <p>¿olvidaste tu contraseña?</p>
+                        <p>¿Olvidaste tú contraseña?</p>
                     </div>
-
+                    
                     <article class="iniciar-sesion">
                         <div>
                             <button type="submit">Iniciar Sesión</button>
                         </div>
                     </article>
                     <article class="login-3">
-                        <p>¿No tenes cuenta?</p>
+                        <p>¿No tienes cuenta?</p>
                         <div class="crear-cuenta">
                             <a href="/usuarios/registrarse"><label for="">Crear cuenta</label></a>
                         </div>
                     </article>
+                    </div>
                 </form>
             </section>
         </main>
