@@ -3,10 +3,10 @@ const fs = require("fs");
 const path = require("path");
 const { check, validationResult } = require("express-validator");
 const bcrypt = require("bcrypt");
-const usersFilePath = path.join(__dirname, "../data/user.json"); //Path usuarios
+//const usersFilePath = path.join(__dirname, "../data/user.json"); //Path usuarios
 
 /* REQUIRIENDO MODULO DE USUARIOS */
-const User = require("../models/register");
+/* const User = require("../models/register"); */
 /* const { INSERT } = require("sequelize/types/query-types") */;
 
 const usersController = {
@@ -14,42 +14,65 @@ const usersController = {
     res.render("login");
   },
   processRegister: (req, res) => {
-    db.Usuarios.create({
-      first_name: req.body.first_name,
-      last_name: req.body.last_name,
-      email: req.body.email,
-      password: req.body.password,
-      categoryId: req.body.categoryId,
-      image: req.body.image,
+    let ConfiEmail = req.body.email;
+
+    /* db.Usuarios.findOne({
+      where:{
+        email:{ConfiEmail}
+      }
     })
-      .then(() => {
-        res.redirect("/usuarios/login");
-      })
-      .catch(error => res.send(error))
+    .then(usuario =>{
+      if (!usuario == null) {
+        return res.render("crearCuenta", {
+          errors: {
+            email: { msg: "Este email ya esta registrado" }
+          },
+          oldData: req.body
+        })
+      } */
+        db.Usuarios.create({
+          first_name: req.body.first_name,
+          last_name: req.body.last_name,
+          email: req.body.email,
+          password: bcrypt.hashSync(req.body.password, 10),
+          categoryId: req.body.categoryId,
+          image: req.body.image,
+        })
+        .then(() => {
+          res.redirect("/usuarios/login");
+        })
+    //})
+    .catch(error => res.send(error))
   },
   processLogin:(req, res) => {
-  let errors = validationResult(req);
-    if (errors.isEmpty()) {
-      let users = JSON.parse(fs.readFileSync(usersFilePath, "utf-8"));
-      let usuarioLoguear;
-      for (let i = 0; i < users.length; i++) {
-        if (users[i].email == req.body.email) {
-          let okPassword = bcrypt.compareSync(req.body.password, users[i].password);
-          if (okPassword) {
-            usuarioLoguear = users[i];
-          }
+    let ConfiEmail = req.body.email;
+    let ConfiPassword = req.body.password;
+    let usuarioLogueado;
+
+      db.Usuarios.findOne({
+        where:{
+          email: {ConfiEmail}
         }
-      }
-      if (usuarioLoguear == undefined) {
-        return res.render("login", {
-          errors: [{ msg: "Credenciales incorrectas" }],
-        });
-      }
-      req.session.usuarioLogueado = usuarioLoguear;
-      res.redirect("/"); 
-    } else {
-      return res.render("login", { errors: errors.errors });
-    }
+      })
+      .then(usuario => {
+          if (usuario == null) { //Confirmamos email
+            return res.render("login", {
+              errors: [{ msg: "Credenciales incorrectas" }],
+            })
+          } else {
+            if (bcrypt.compareSync(ConfiPassword, usuario.password)){
+              req.session.resultado = usuarioLogueado;
+              res.redirect("/");
+            } else {
+              return res.render("login", {
+                errors: [{ msg: "Credenciales incorrectas" }],
+              })
+            }
+          }
+      })
+      .catch(errors => {
+        res.render("login", { errors: errors.errors });
+      })
   },
   account: (req, res) => {
     res.render("cuenta");

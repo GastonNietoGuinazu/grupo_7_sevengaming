@@ -7,7 +7,6 @@
           <label class="menu__btn" for="menu__toggle">
             <span></span>
           </label>
-      
           <ul class="menu__box">
             <li><a class="menu__item" href="/">Home</a></li>
             <li><a class="menu__item" href="/productos/productsList">Lista de Productos</a></li>
@@ -19,6 +18,9 @@
           </ul>
         </div>
       </div>
+      <% if (locals.userLogued){%>
+      <span><p style="color:white">Hola <%= locals.usuarioLogueado.first_name %></p></span>
+      <% } %> 
       <div class="subNav2">
         <img class="logo" src="/images/logo.svg" alt="logo" />
       </div>
@@ -29,17 +31,16 @@
             width: 20px;
             height: 20px;
             cursor: pointer;
-            "></i></a>
- 
- <div class="searchBox">
-
-  <input class="searchInput"type="text" name="" placeholder="Search">
-  <button class="searchButton" href="#">
-      <i class="fas fa-search">
-      </i>
-  </button>
-</div>
-        <a href="/productos/carrito"><i class="fas fa-cart-plus" style="color: white; width: 20px; height: 20px; cursor: pointer"></i></a>
+            "></i>
+        </a>
+        <div class="searchBox">
+          <input class="searchInput" type="text" name="" placeholder="Search">
+          <button class="searchButton" href="#">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        <a href="/productos/carrito"><i class="fas fa-cart-plus"
+            style="color: white; width: 20px; height: 20px; cursor: pointer"></i></a>
       </div>
     </div>
 </header>
