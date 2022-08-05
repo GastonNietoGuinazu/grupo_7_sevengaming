@@ -41,14 +41,15 @@ body {
   height: 150px;
   width: 120px;
 }
-.container {
-  height: 300px;
-  width: 900px;
+.container-carousel {
+  height: 350px;
+  width: 100%;
   bottom: 20px;
   left: 100px;
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
+  z-index: 1 !important;
 }
 
 .card {
@@ -63,22 +64,23 @@ body {
   position: relative;
   left: 0px;
   margin-top: 10px;
+  z-index: 1;
 }
 
-.card:not(:first-child) {
+/* .card:not(:first-child) {
     margin-left: -50px;
-}
+} */
 
 .card:hover {
-  transform: translateY(-20px);
-  transition: 0.4s ease-out;
+  transform: translateY(-30px);
+  transition: 0.3s ease-out;
 }
 
-.card:hover ~ .card {
+/* .card:hover ~ .card {
   position: relative;
   left: 50px;
   transition: 0.4s ease-out;
-}
+} */
 
 .title {
   color: white;
@@ -150,6 +152,7 @@ svg {
   background-color: rgb(225, 225, 225);
   border-top: 1px solid #e5e5e5;
   bottom: 0cm;
+  overflow: hidden;
 }
 
 .footer > * {
@@ -334,17 +337,25 @@ color : #2f3640;
 }
 #menu__toggle {
   opacity: 0;
+  z-index: 2;
+  position: absolute;
 }
 #menu__toggle:checked + .menu__btn > span {
   transform: rotate(45deg);
+  position: absolute;
+  z-index: 2;
 }
 #menu__toggle:checked + .menu__btn > span::before {
   top: 0;
   transform: rotate(0deg);
+  position: absolute;
+  z-index: 2;
 }
 #menu__toggle:checked + .menu__btn > span::after {
   top: 0;
   transform: rotate(90deg);
+  position: absolute;
+  z-index: 2;
 }
 #menu__toggle:checked ~ .menu__box {
   left: 0 !important;
@@ -528,7 +539,7 @@ footer {
 
 .cards-container {
   max-width: 100%;
-  height: fit-content;
+  height: auto;
   display: grid;
   grid-template-columns: auto auto auto;
   column-gap: 50px;
@@ -555,6 +566,8 @@ footer {
 .texto1 {
   color: #009ade;
   margin-top: 8px;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 .icon {
@@ -899,6 +912,7 @@ footer {
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
+    text-align: center;
   }
 
   .texto1 {
@@ -1187,6 +1201,7 @@ footer {
     height: 153px;
     display: flex;
     flex-direction: column;
+    padding: 10px !important;
   }
 
   .precio1 {
@@ -1581,6 +1596,5 @@ footer {
   .logos-redes-sociales {
     display: flex;
     justify-content: center;
-    border: solid red 1px;
   }
 }
