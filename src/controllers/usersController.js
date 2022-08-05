@@ -62,6 +62,7 @@ const usersController = {
           } else {
             if (bcrypt.compareSync(ConfiPassword, usuario.password)){
               req.session.resultado = usuarioLogueado;
+              console.log(usuario)
               res.redirect("/");
             } else {
               return res.render("login", {

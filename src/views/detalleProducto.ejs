@@ -12,9 +12,7 @@
     <link rel="stylesheet" href="/css/home.css" />
     <link rel="stylesheet" href="/css/cuenta.css" />
     <link rel="stylesheet" href="/css/listaProductos.css" />
-    <title>
-        <%= product.name %>
-    </title>
+    <title><%= product.name %></title>
 </head>
 
 <body>
@@ -24,10 +22,12 @@
                 <p>Precio: <%= product.price %></p>
                 <p>Categoria: <%= product.categoryId %></p>
                 <p>Description: <%= product.description %></p>
-                <p><a href="/productos/editarProducto/<%= product.id%>"><button>Editar Producto</button></a></p>
-                <p><a href="/productos/eliminar/<%= product.id%>"><button>Borrar Producto</button></a></p>
+                <div class="cards-container">
+                    <p><a href="/productos/editarProducto/<%= product.id%>"><button class="botom--format" type="button">Editar Producto</button></a></p>
+                    <p><a href="/productos/eliminar/<%= product.id%>"><button class="botom--format" type="button">Borrar Producto</button></a></p>
+                </div>
         </div>
-        <%- include('partials/footer') %>
+    <%- include('partials/footer') %>
 </body>
 
 </html>
