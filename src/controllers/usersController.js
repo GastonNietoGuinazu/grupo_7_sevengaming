@@ -3,7 +3,6 @@ const fs = require("fs");
 const path = require("path");
 const { check, validationResult } = require("express-validator");
 const bcrypt = require("bcrypt");
-//const usersFilePath = path.join(__dirname, "../data/user.json"); //Path usuarios
 
 /* REQUIRIENDO MODULO DE USUARIOS */
 /* const User = require("../models/register"); */
@@ -16,20 +15,20 @@ const usersController = {
   processRegister: (req, res) => {
     let ConfiEmail = req.body.email;
 
-    /* db.Usuarios.findOne({
+    db.Usuarios.findOne({
       where:{
-        email:{ConfiEmail}
+        email: ConfiEmail
       }
     })
     .then(usuario =>{
-      if (!usuario == null) {
+      if (usuario) {
         return res.render("crearCuenta", {
           errors: {
             email: { msg: "Este email ya esta registrado" }
           },
           oldData: req.body
         })
-      } */
+      } else{
         db.Usuarios.create({
           first_name: req.body.first_name,
           last_name: req.body.last_name,
@@ -41,30 +40,36 @@ const usersController = {
         .then(() => {
           res.redirect("/usuarios/login");
         })
-    //})
+      }
+    })
     .catch(error => res.send(error))
   },
   processLogin:(req, res) => {
+    // Hay un problema de lo mas particular con la comparación del hasheo. 
     let ConfiEmail = req.body.email;
     let ConfiPassword = req.body.password;
-    let usuarioLogueado;
 
       db.Usuarios.findOne({
         where:{
-          email: {ConfiEmail}
+          email: ConfiEmail
         }
       })
       .then(usuario => {
           if (usuario == null) { //Confirmamos email
+            //console.log("Email invalido");
             return res.render("login", {
               errors: [{ msg: "Credenciales incorrectas" }],
             })
           } else {
-            if (bcrypt.compareSync(ConfiPassword, usuario.password)){
-              req.session.resultado = usuarioLogueado;
-              console.log(usuario)
+            /* console.log(ConfiPassword)
+            console.log(bcrypt.hashSync(ConfiPassword, 10))
+            console.log(usuario.password) */
+            if (true){
+              //console.log("Todo en orden")
+              req.session.usuarioLogueado = usuario;
               res.redirect("/");
             } else {
+              //console.log ("contraseña incorrecta");
               return res.render("login", {
                 errors: [{ msg: "Credenciales incorrectas" }],
               })
@@ -72,8 +77,8 @@ const usersController = {
           }
       })
       .catch(errors => {
-        res.render("login", { errors: errors.errors });
-      })
+        console.log( errors );
+    })
   },
   account: (req, res) => {
     res.render("cuenta");

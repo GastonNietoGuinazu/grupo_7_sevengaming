@@ -4,6 +4,7 @@ const path = require("path");
 const methodOverride = require("method-override");
 const session = require('express-session'); // Instalando express-session
 const userLogued = require("./middlewares/userLoguedd");
+const error404 = require("./middlewares/error");
 const cookies = require("cookie-parser");
 
 app.set('views',path.resolve(__dirname,'views')); // Similar a los recursos estaticos, es para evitar poner el path
@@ -15,7 +16,6 @@ app.use(methodOverride('_method')); // Para poder usar los métodos PUT y DELETE
 app.use(session({secret:'Secreto', resave: false, saveUninitialized: true,})); // Utilizando middleware a nivel global de express-session
 app.use(userLogued); // Permite aplicar la logica para que haya cambios si estas logueado o no
 app.use(cookies()); // Cookies
-//app.use((req,res,next) => res.status(404).render("No encontrado")); // Error 404
 
 /********** Routers importados **********/
 
@@ -26,6 +26,7 @@ const homeRouter = require("./routes/homeRouter.js");
 app.use("/productos", productsRouter);
 app.use("/usuarios", usersRouter);
 app.use("/", homeRouter);
+app.use(error404);
 
 app.listen(3012,()=>{
     console.log('servidor corriendo en http://localhost:3012');
