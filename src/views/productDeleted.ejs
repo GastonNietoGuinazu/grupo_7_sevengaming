@@ -17,6 +17,7 @@
 </head>
 
 <body>
+    <!-- Header -->
     <%- include('partials/header') %>
         <div class="container-prueba">
             <h1>Estas seguro de querer borrar este Producto: <%= product.name %> ???</h1>
@@ -28,6 +29,7 @@
                 <a href="/productos/detail/<%= product.id %>"><button class="botom--format" type="button">Volver a Detalle</button></a>
             </div>
         </div>
+    <!-- Footer -->
     <%- include('partials/footer') %>
 </body>
 

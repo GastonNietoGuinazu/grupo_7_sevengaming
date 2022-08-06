@@ -8,14 +8,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
     <script src="https://kit.fontawesome.com/6d7ddf6bb9.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/producto.css" />
     <link rel="stylesheet" href="/css/home.css" />
     <link rel="stylesheet" href="/css/cuenta.css" />
+    <link rel="stylesheet" href="/css/producto.css" />
     <link rel="stylesheet" href="/css/listaProductos.css" />
     <title><%= product.name %></title>
 </head>
 
 <body>
+    <!-- Header -->
     <%- include('partials/header') %>
         <div class="container-prueba">
             <h1><%= product.name %></h1><br>
@@ -23,11 +24,12 @@
                 <p>Categoria: <%= product.categoryId %></p>
                 <p>Description: <%= product.description %></p>
                 <div class="cards-container">
-                    <p><a href="/productos/editarProducto/<%= product.id%>"><button class="botom--format" type="button">Editar Producto</button></a></p>
+                    <a href="/productos/editarProducto/<%= product.id%>"><button class="botom--format" type="button">Editar Producto</button></a>
                     <a href="/productos/productsList"><button class="botom--format" type="button">Listado de Productos</button></a>
-                    <p><a href="/productos/eliminar/<%= product.id%>"><button class="botom--format" type="button">Borrar Producto</button></a></p>
+                    <a href="/productos/eliminar/<%= product.id%>"><button class="botom--format" type="button">Borrar Producto</button></a>
                 </div>
         </div>
+    <!-- Footer -->
     <%- include('partials/footer') %>
 </body>
 

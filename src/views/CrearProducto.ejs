@@ -6,13 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/6d7ddf6bb9.js" crossorigin="anonymous"></script>
-    <link href="/css/home.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/home.css"> 
+    <link rel="stylesheet" href="/css/listaProductos.css" />
     <title>Seven Gaming</title>
 </head>
 
 <body>
     <!-- Header -->
     <%- include('partials/header') %>
+    <div class="container-prueba">
         <main class="main__distribution">
             <h1 class="title--format">Agregar producto </h1>
             <form action="/productos/crearProducto" method="post" class="form--format">
@@ -36,23 +38,17 @@
                     <option value="2">Libros</option>
                     <option value="3">Accesorios</option>
                 </select><br>
-                <!-- <label for="username">tematica</label><br>
-                <select id="tematica" name="tematica"> <br>
-                    <option value="Destiny">Destiny</option>
-                    <option value="LOL">LOL</option>
-                    <option value="CSS">CSS</option>
-                </select><br> -->
                 <label for="precio">precio</label><br>
                 <input type="price" id="prc" name="prc">
-                <div class="create--acount">
+                <div class="cards-container">
                     <button class="botom--format" type="submit">Agregar</button>
-                    <div class="data">
-                    </div>
+                    <div class="data"></div>
                 </div>
             </form>
         </main>
-        <!-- Footer -->
-        <%- include('partials/footer') %>
+    </div>
+    <!-- Footer -->
+    <%- include('partials/footer') %>
 </body>
 
 </html>
