@@ -11,35 +11,41 @@
             <li><a class="menu__item" href="/">Home</a></li>
             <li><a class="menu__item" href="/usuarios/login">Ingresar</a></li>
             <li><a class="menu__item" href="/productos/listaProducto">Productos</a></li>
-            <li><a class="menu__item" href="/productos/productsList">Lista de Productos</a></li>
-            <li><a class="menu__item" href="/productos/crearProducto">Crear Productos</a></li>
-            <li><a class="menu__item" href="/productos/carrito">Carrito</a></li>
+            <%if (locals.isLogged && locals.usuarioLogueado.categoryId == 1){%>
+              <li><a class="menu__item" href="/productos/productsList">Lista de Productos</a></li>
+              <li><a class="menu__item" href="/productos/crearProducto">Crear Productos</a></li>
+              <%}%>
+                <li><a class="menu__item" href="/productos/carrito">Carrito</a></li>
           </ul>
         </div>
       </div>
-      <% if (locals.userLogued){%>
-        <div><p style="color:gold">Hola <%= locals.usuarioLogueado.first_name %></p></div>
-      <% } %> 
       <div class="subNav2">
         <img class="logo" src="/images/logo.svg" alt="logo" />
       </div>
       <div class="subNav3">
-        <a href="/usuarios/login"><i class="far fa-user-circle" style="
+        <% if (locals.isLogged){%>
+          <div>
+            <p style="color:gold">Hola <%= locals.usuarioLogueado.first_name %>
+            </p>
+          </div>
+          <% } else {%>
+            <div class="searchBox">
+              <input class="searchInput" type="text" name="" placeholder="Search">
+              <button class="searchButton" href="#">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+            <a href="/usuarios/login"><i class="far fa-user-circle" style="
             color: white;
             margin-right: 10px;
             width: 20px;
             height: 20px;
             cursor: pointer;
             "></i>
-        </a>
-        <div class="searchBox">
-          <input class="searchInput" type="text" name="" placeholder="Search">
-          <button class="searchButton" href="#">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-        <a href="/productos/carrito"><i class="fas fa-cart-plus"
-            style="color: white; width: 20px; height: 20px; cursor: pointer"></i></a>
+            </a>
+            <a href="/productos/carrito"><i class="fas fa-cart-plus"
+                style="color: white; width: 20px; height: 20px; cursor: pointer"></i></a>
+            <%}%>
       </div>
     </div>
 </header>

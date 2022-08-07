@@ -66,6 +66,7 @@ const usersController = {
             console.log(usuario.password) */
             if (true){
               //console.log("Todo en orden")
+              delete usuario.password;
               req.session.usuarioLogueado = usuario;
               res.redirect("/");
             } else {
@@ -89,7 +90,6 @@ const usersController = {
   list: (req, res) => {
     db.Usuarios.findAll()
       .then(function (usuarios) {
-        console.log(usuarios, "TODOS LOS USUARIOS")
         res.render("usuarios", { usuarios: usuarios })
       })
   },
@@ -106,7 +106,7 @@ const usersController = {
     
   },
   logout: (req, res) => {
-    req.session.destroy
+    req.session.destroy();
     return res.redirect("/")
   }
 };
