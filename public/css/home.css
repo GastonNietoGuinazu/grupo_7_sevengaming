@@ -235,7 +235,7 @@ color : #2f3640;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.4s;
+  transition: 0.3s;
 }
 
 .searchInput {
