@@ -9,7 +9,9 @@
           </label>
           <ul class="menu__box">
             <li><a class="menu__item" href="/">Home</a></li>
-            <li><a class="menu__item" href="/usuarios/login">Ingresar</a></li>
+            <%if (!locals.isLogged){ %>
+              <li><a class="menu__item" href="/usuarios/login">Ingresar</a></li>
+            <%}%>
             <li><a class="menu__item" href="/productos/listaProducto">Productos</a></li>
             <%if (locals.isLogged && locals.usuarioLogueado.categoryId == 1){%>
               <li><a class="menu__item" href="/productos/productsList">Lista de Productos</a></li>
