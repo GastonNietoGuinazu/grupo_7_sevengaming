@@ -40,7 +40,7 @@ const productsController = {
             description: req.body.desripcion,
             image: req.body.imagen1,
         });
-        res.send("Producto agregado!!!");
+        res.redirect("/productos/productsList");
     },
     // Edición del producto
     editProduct: (req, res) => {
