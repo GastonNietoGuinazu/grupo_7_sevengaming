@@ -33,9 +33,8 @@ INSERT INTO DbSevenGaming.products (id, name, price, categoryId, description, im
 (10, "GORRA FORTNITE", 175, 3, "Las mejores gorras del mercado ofrecidas al precio más económico. Gorras del famoso juego FORNITE de la más alta calidad.", "gorra-fortnite.jpg");
 -- users --
 INSERT INTO DbSevenGaming.users (id, first_name, last_name, email, password, categoryId, image) VALUES 
-(1, "Bernabé", "Rodriguez", "Berna@myspace.com", "$2b$10$pUiUtTxU7MJw3jHXs0TYO.EkQLwuKrIlrsU3TRZDosXMYBqBcfSIq", 1, ""),
-(2, "Pedro", "Cassani", "pedro@gmail.com", "$2b$10$xo9fbZA6V3G1PP0bOmpjlONESxQFa6AQmc0H8W/PuRRXTawR.WWJe", 1, ""),
-(3, "Gaston", "Nieto", "gaston@gmail.com", "$2b$10$Q5WCSZRSbDZnk5ZfOcRs3eVKt8sDov8BW3PfUsr0GAOcTU7TLLwie", 1, ""),
-(4, "Maria", "Aguirre", "Mari@gmail.com", "$2b$10$sPyzEtILaluy3cvUrPCwK.EC1nVr3lCgq9AEW0GC3RpoHhYUoXw/a", 2, ""),
-(5, "Mateo", "Alferez", "Mateo@hotmail.com", "$2b$10$1B6gcB9aLihpQcs9eNVhp.hZlrIWvnJBNNKlkKikzwWe.ZXzRK/fK", 2, ""),
-(6, "Luz", "Alcorta", "LuzAlcorta@msn.com", "$2b$10$UOjWkKGKwPGif2nvcYXq1..hgbtH5hAEsOY3A59y9S8sTMMAqRBRW", 2, "");
+(1, "Admin", "Admin", "admin@gmail.com", "$2b$10$Y10B5O1xhKOBgD2CERue2.7XHk8RviSM22wE/ym8SVSkC8IWd6GJ2", 1, ""), -- Contraseña: 12345678 --
+(2, "Admin2", "Admin2", "admin2@hotmail.com", "$2b$10$G2CW2Bs17AZigP/R8OMQN.jGOzQu87XjOINk8REfErNUmAKlko4uu", 1, ""), -- Contraseña: 123admin --
+(3, "Maria", "Aguirre", "mari@gmail.com", "$2b$10$f6Rq/93jazd31Le.1nMKWOnx8iUrFbmH1aD1mRABR5nvhoSZL0.SG", 2, ""), -- Contraseña: 123maria --
+(4, "Mateo", "Alferez", "mateo@hotmail.com", "$2b$10$lhCJwc01mtgFhnOEK8v8E.Y80fo8ZYmljH8tluso76.be/Fz.aj8e", 2, ""), -- Contraseña: 123mateo --
+(5, "Luz", "Alcorta", "luzAlcorta@msn.com", "$2b$10$ukb5py0TUPz86bmwoNUxguQuhrbssFyBwPMWHsGjtndfPemuZzoBe", 2, ""); -- Contraseña: 123luz --

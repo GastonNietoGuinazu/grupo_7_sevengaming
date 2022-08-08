@@ -36,7 +36,7 @@ const usersController = {
           password: bcrypt.hashSync(req.body.password, 10),
           categoryId: req.body.categoryId,
           image: req.body.image,
-        })
+        }) 
         .then(() => {
           res.redirect("/usuarios/login");
         })
