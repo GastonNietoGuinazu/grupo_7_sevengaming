@@ -12,10 +12,16 @@ const productsController = {
         res.render("carrito")
     },
     productList: (req, res) => {
-        res.render("productList")
+        db.Productos.findAll()
+            .then(products => {
+                res.render("productList", { products })
+            })
     },
     productDetail: (req, res) => {
-        res.render("productDetail")
+        db.Productos.findByPk(req.params.id)
+            .then(products => {
+                res.render("productDetail", { products })
+            })    
     },
     crearProducto: (req, res) => {
         res.render("crearProducto")

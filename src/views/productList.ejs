@@ -23,22 +23,28 @@
     <article class="juegos">
       <div class="titleContainer"><span class="tituloJuegos">Juegos</span></div>
       <section class="gamesContainer">
-        
+        <!-- <% if (products.categoryId == 1) { %><% } %>
+        <% for( let i=0; i < products.length; i++ ) { %>
+          <div class="juego1">
+            <a href="/productos/detalle/<%= products[i].id %>"><img class="img-game" src="<%= products[i].image%>" alt="juego" /></a>
+            <h3 class="title1"><%= products[i].name %></h3>
+          </div> //Planteada la logica para poder ver todos los productos de la base de datos.
+          <% } %> --> 
         <div class="juego1">
           <a href="/productos/detalle"><img class="img-game" src="/images/fortnite.jpeg" alt="juego" /></a>
           <h3 class="title1">FORTNITE</h3>
         </div>
         <div class="juego1">
           <a href="/productos/detalle"><img class="img-game" src="/images/hogwarts.jpg" alt="juego" /></a>
-          <h3 class="title1">HOGWARTS</h3>
-        </div>
-        <div class="juego1">
-          <a href="/productos/detalle"><img class="img-game" src="/images/world-war.webp" alt="juego" /></a>
-          <h3 class="title1">HEROES</h3>
+          <h3 class="title1">Hogwarts Legacy</h3>
         </div>
         <div class="juego1">
           <a href="/productos/detalle"><img class="img-game" src="/images/horizon.jpg" alt="juego" /></a>
-          <h3 class="title1">HORIZON</h3>
+          <h3 class="title1">Horizon Forbidden West</h3>
+        </div>
+        <div class="juego1">
+          <a href="/productos/detalle"><img class="img-game" src="/images/world-war.webp" alt="juego" /></a>
+          <h3 class="title1">Heroes & Generals</h3>
         </div>
       </section>
     </article>
@@ -49,19 +55,19 @@
       <section class="gamesContainer">
         <div class="libro1">
           <a href="/productos/detalle"><img class="img-game" src="/images/halo.jpg" alt="libro" /></a>
-          <h3 class="title2">HALO</h3>
+          <h3 class="title2">Halo: The Fall of Reach </h3>
         </div>
         <div class="libro1">
           <a href="/productos/detalle"><img class="img-game" src="/images/harry-potter.jpg" alt="libro" /></a>
-          <h3 class="title2">HARRY POTTER</h3>
+          <h3 class="title2">Harry Potter y la piedra filosofal</h3>
         </div>
         <div class="libro1">
           <a href="/productos/detalle"><img class="img-game" src="/images/player-one.png" alt="libro" /></a>
-          <h3 class="title2">READY PLAYER ONE</h3>
+          <h3 class="title2">Ready Player One</h3>
         </div>
         <div class="libro1">
           <a href="/productos/detalle"><img class="img-game" src="/images/star-wars.webp" alt="libro" /></a>
-          <h3 class="title2">STAR WARS</h3>
+          <h3 class="title2">El libro de Star Wars</h3>
         </div>
       </section>
     </article>
