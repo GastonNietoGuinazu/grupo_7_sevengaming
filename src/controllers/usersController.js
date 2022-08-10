@@ -82,7 +82,10 @@ const usersController = {
     })
   },
   account: (req, res) => {
-    res.render("cuenta");
+    db.Productos.findAll()
+      .then(user => {
+        res.render('cuenta', {user})
+      })
   },
   register: (req, res) => {
     res.render("crearCuenta");
@@ -93,17 +96,38 @@ const usersController = {
         res.render("usuarios", { usuarios: usuarios })
       })
   },
-  profile: (req, res) => {
-    db.Usuarios.findByPk(req.params.id)
-      .then(function (usuario) {
-        res.render("cuenta", { usuario: usuario })
-      })
+  deleted: (req, res) => {
+    let userId = req.params.id;
+    db.Usuarios.findByPk(userId)
+      .then(user => {
+        res.render("userDeleted", {user});
+    })
   },
-  formUser:(req,res) => {
-    res.render("modificarUsuario");
+  destroy: (req, res) => {
+
   },
   edit:(req,res) => {
-    
+    let id = req.params.id
+      db.Usuarios.findByPk(id)
+        .then(user => {
+          res.render('userEdit', { user })
+      });
+  },
+  upDate:(req,res) => {
+    let userId = req.params.id;
+    db.Usuarios.update({
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        email: req.body.email,
+        //password: req.body.password,
+        categoryId: req.body.category
+    }, {
+        where: { id: userId }
+    }) 
+        .then(() => {
+            return res.redirect("/usuarios/perfil");
+        })
+        .catch(error => res.send(error))  
   },
   logout: (req, res) => {
     req.session.destroy();

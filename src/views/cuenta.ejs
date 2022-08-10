@@ -7,16 +7,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://kit.fontawesome.com/6d7ddf6bb9.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="/css/home.css">
-  <link rel="stylesheet" href="/css/crearCuenta.css"/>
+  <link rel="stylesheet" href="/css/producto.css" />
+  <link rel="stylesheet" href="/css/listaProductos.css" />
   <title>Seven Gaming</title>
 </head>
 
 <body>
   <!-- Header -->
   <%- include('partials/header') %>
-    <article class="body">
-
-    </article>
+  <main>
+    <div class="container-prueba">
+      <h1 class="listado-productos"><%= locals.usuarioLogueado.first_name %> <%= locals.usuarioLogueado.last_name %></h1>
+      <div class="cards-container">
+        <ul class="items-container">
+          <img class="img-game" src="/images/csgopersonaje2.jpeg" alt="foto perfil" />
+          <li class="items">
+              <p>Nombre: <%= locals.usuarioLogueado.first_name %></p>
+              <p>Apellido: <%= locals.usuarioLogueado.last_name %></p>
+              <p>Email: <%= locals.usuarioLogueado.email %></p>
+              <p>Categoría: <% if (locals.usuarioLogueado.categoryId == 1){%> Administrador
+              <%} else {%> Cliente <%}%></p>
+          </li>
+        </ul>
+      </div>
+      <div class="cards-container">
+        <a href="/usuarios/editar"><button class="botom--format" type="button">Editar Perfil</button></a>
+        <a href="/usuarios/eliminar/<%= locals.usuarioLogueado.id %>"><button class="botom--format" type="button">Eliminar Cuenta</button></a>
+      </div>
+    </div>    
+  </main>
   <!-- Footer -->
   <%- include('partials/footer') %>
 </body>
