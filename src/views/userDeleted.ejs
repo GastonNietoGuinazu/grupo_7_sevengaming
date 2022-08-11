@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="/css/cuenta.css" />
     <link rel="stylesheet" href="/css/producto.css" />
     <link rel="stylesheet" href="/css/listaProductos.css" />
-    <title>Eliminar <%= user.first_name  %>
-    </title>
+    <title>Borrar <%= user.first_name  %></title>
 </head>
 
 <body>
@@ -22,7 +21,7 @@
         <div class="container-prueba">
             <h1>Estas seguro de querer eliminar tu cuenta: <%= user.first_name %> ???</h1>
             <div class="cards-container">
-                <a href="/usuarios/perfil"><button class="botom--format" type="button">Volver a Perfil</button></a>
+                <a href="/usuarios/perfil/<%= user.id %>"><button class="botom--format" type="button">Volver a Perfil</button></a>
                 <form action="/usuarios/eliminar/<%= user.id %>" method="POST">
                     <button class="botom--format" type="submit">Eliminar Cuenta</button>
                 </form>

@@ -3,6 +3,7 @@ const fs = require("fs");
 const path = require("path");
 const { check, validationResult } = require("express-validator");
 const bcrypt = require("bcrypt");
+const session = require("express-session");
 
 /* REQUIRIENDO MODULO DE USUARIOS */
 /* const User = require("../models/register"); */
@@ -82,9 +83,9 @@ const usersController = {
     })
   },
   account: (req, res) => {
-    db.Productos.findAll()
+    db.Usuarios.findByPk(req.params.id)
       .then(user => {
-        res.render('cuenta', {user})
+        res.render('perfil', { user })
       })
   },
   register: (req, res) => {
@@ -104,7 +105,15 @@ const usersController = {
     })
   },
   destroy: (req, res) => {
-
+    let id = req.params.id;
+      db.Usuarios.destroy({
+          where: { id: id }, forcer: true
+      })
+      .then(() => {
+        req.session.destroy();
+        res.redirect("/");
+      })
+      .catch(error => res.send(error))
   },
   edit:(req,res) => {
     let id = req.params.id
@@ -119,13 +128,12 @@ const usersController = {
         first_name: req.body.first_name,
         last_name: req.body.last_name,
         email: req.body.email,
-        //password: req.body.password,
         categoryId: req.body.category
     }, {
         where: { id: userId }
     }) 
         .then(() => {
-            return res.redirect("/usuarios/perfil");
+            return res.redirect("/");
         })
         .catch(error => res.send(error))  
   },

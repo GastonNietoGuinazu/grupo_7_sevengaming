@@ -8,7 +8,7 @@
     <script src="https://kit.fontawesome.com/6d7ddf6bb9.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/cuenta.css">
-    <title>Seven Gaming</title>
+    <title>Editar <%= user.first_name %></title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
 </head>
 
@@ -16,19 +16,19 @@
     <!-- Header -->
     <%- include('partials/header') %>
         <main class="main__distribution">
-            <h1 class="title--format">Editar usuario </h1>
-            <form action="/productos/edit/:id?_method=DELETE" method="post" class="form--format">
+            <h1 class="title--format">Editar Usuario: <%= user.first_name %></h1>
+            <form action="/usuarios/editar/<%= user.id %>" method="post" class="form--format">
                 <div>
                     <label for="username">Modificar Nombre</label>
-                    <input type="text" id="username" name="first_name">
+                    <input type="text" id="username" name="first_name" value="<%= user.first_name %>">
                 </div>
                 <div>
                     <label for="precio">Modificar Apellido</label>
-                    <input type="price" id="prc" name="last_name">
+                    <input type="text" id="prc" name="last_name" value="<%= user.last_name %>">
                 </div>
                 <div>
                     <label for="precio">Modificar Email</label>
-                    <input type="price" id="prc" name="email">
+                    <input type="text" id="prc" name="email" value="<%= user.email %>">
                 </div>
                 <!-- <div>
                     <label for="precio">Modificar Contraseña</label>
@@ -37,8 +37,13 @@
                 <div>
                     <label for="username">Categorias</label>
                     <select id="categoria" name="category">
-                        <option value="1">Administrador</option>
-                        <option value="2">Cliente</option>
+                        <% if (user.categoryId == 1) { %>
+                            <option value="1" selected>Administrador</option>
+                            <option value="2">Cliente</option>
+                        <% } else { %>
+                            <option value="1">Administrador</option>
+                            <option value="2" selected>Cliente</option>
+                        <% } %>
                     </select>
                 </div>
                 <!-- <div class="nombre--format">//Logica planteada para agregar imagenes pero no funciona por un mal funcionamiento del enctype.
@@ -48,13 +53,12 @@
                         <input type="submit" name="subir-imagen" value="enviar imagen" />
                     </div>
                 </div> -->
-            </form>
-
-            <div class="create--acount">
-                <button class="botom--format" type="button" onclick="alert('cuenta creada!')">Actualizar</button>
-                <div class="data">
+                <div class="create--acount">
+                    <div class="data">
+                        <button class="botom--format" type="submit">Actualizar</button>
+                    </div>
                 </div>
-            </div>
+            </form>
         </main>
         <!-- Footer -->
         <%- include('partials/footer') %>

@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="/css/home.css">
   <link rel="stylesheet" href="/css/producto.css" />
   <link rel="stylesheet" href="/css/listaProductos.css" />
-  <title>Seven Gaming</title>
+  <title><%= user.first_name %> <%= user.last_name %></title>
 </head>
 
 <body>
@@ -17,22 +17,22 @@
   <%- include('partials/header') %>
   <main>
     <div class="container-prueba">
-      <h1 class="listado-productos"><%= locals.usuarioLogueado.first_name %> <%= locals.usuarioLogueado.last_name %></h1>
+      <h1 class="listado-productos"><%= user.first_name %> <%= user.last_name %></h1>
       <div class="cards-container">
         <ul class="items-container">
           <img class="img-game" src="/images/csgopersonaje2.jpeg" alt="foto perfil" />
           <li class="items">
-              <p>Nombre: <%= locals.usuarioLogueado.first_name %></p>
-              <p>Apellido: <%= locals.usuarioLogueado.last_name %></p>
-              <p>Email: <%= locals.usuarioLogueado.email %></p>
-              <p>Categoría: <% if (locals.usuarioLogueado.categoryId == 1){%> Administrador
+              <p>Nombre: <%= user.first_name %></p>
+              <p>Apellido: <%= user.last_name %></p>
+              <p>Email: <%= user.email %></p>
+              <p>Categoría: <% if (user.categoryId == 1){%> Administrador
               <%} else {%> Cliente <%}%></p>
           </li>
         </ul>
       </div>
       <div class="cards-container">
-        <a href="/usuarios/editar"><button class="botom--format" type="button">Editar Perfil</button></a>
-        <a href="/usuarios/eliminar/<%= locals.usuarioLogueado.id %>"><button class="botom--format" type="button">Eliminar Cuenta</button></a>
+        <a href="/usuarios/editar/<%= user.id %>"><button class="botom--format" type="button">Editar Perfil</button></a>
+        <a href="/usuarios/eliminar/<%= user.id %>"><button class="botom--format" type="button">Eliminar Cuenta</button></a>
       </div>
     </div>    
   </main>

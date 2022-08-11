@@ -9,18 +9,16 @@
           </label>
           <ul class="menu__box">
             <li><a class="menu__item" href="/">Home</a></li>
-            <%if (!locals.isLogged){ %>
+            <% if (!locals.isLogged) { %>
               <li><a class="menu__item" href="/usuarios/login">Ingresar</a></li>
-            <%}%>
+              <li><a class="menu__item" href="/usuarios/registrarse">Crear Cuenta</a></li>
+            <% } %>
               <li><a class="menu__item" href="/productos/listaProducto">Productos</a></li>
-            <%if (locals.isLogged && locals.usuarioLogueado.categoryId == 1){%>
+            <% if (locals.isLogged && locals.usuarioLogueado.categoryId == 1) { %>
               <li><a class="menu__item" href="/productos/productsList">Lista de Productos</a></li>
               <li><a class="menu__item" href="/productos/crearProducto">Crear Productos</a></li>
-              <%}%>
-              <li><a class="menu__item" href="/productos/carrito">Carrito</a></li>
-            <%if (locals.isLogged){ %>
               <li><a class="menu__item" href="/usuarios/logout">Cerrar Sesión</a></li>
-            <%}%>
+            <% } %>
           </ul>
         </div>
       </div>
@@ -30,7 +28,7 @@
       <div class="subNav3">
         <% if (locals.isLogged){%>
           <div>
-            <a href="/usuarios/perfil"><p style="color:gold" >Hola <%= locals.usuarioLogueado.first_name %></p></a>
+            <a href="/usuarios/perfil/ <%= locals.usuarioLogueado.id %>"><p style="color:gold" >Hola <%= locals.usuarioLogueado.first_name %></p></a>
           </div>
           <% } else {%>
             <div class="searchBox">
