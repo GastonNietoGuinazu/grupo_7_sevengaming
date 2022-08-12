@@ -12,20 +12,28 @@
     <link rel="stylesheet" href="/css/cuenta.css" />
     <link rel="stylesheet" href="/css/producto.css" />
     <link rel="stylesheet" href="/css/listaProductos.css" />
+    <link rel="stylesheet" href="/css/404.css" />
     <title>Seven Gaming</title>
 </head>
 
 <body>
     <!-- Header -->
     <%- include('partials/header') %>
-    <main>
-        <section>
-            <div class="form-completo">
-                <h1>Error 404</h1>
-                <b><p>Lo sentimos!  No se pudo encontrar la ruta solicitada.</p></b>
+    <body class="not-found">
+        <section class="notFound">
+            <div class="img">
+            <img src="https://assets.codepen.io/5647096/backToTheHomepage.png" alt="Back to the Homepage"/>
+            <img src="https://assets.codepen.io/5647096/Delorean.png" alt="El Delorean, El Doc y Marti McFly"/>
+            </div>
+            <div class="text">
+            <h1>404</h1>
+            <h2>PAGE NOT FOUND</h2>
+            <h3>BACK TO HOME?</h3>
+            <a href="/" class="yes">YES</a>
+            <a href="https://www.youtube.com/watch?v=G3AfIvJBcGo">NO</a>
             </div>
         </section>
-    </main>
+    </body>
     <!-- Footer -->
     <%- include('partials/footer') %>
 </body>
