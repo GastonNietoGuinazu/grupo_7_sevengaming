@@ -1,7 +1,7 @@
-function error404 (req, res, next){
-    if (!req.session.usuarioLogueado) {
-        return res.redirect("/usuarios/login");
-    }
+function error404(req, res, next) {
+
+    return res.status(404).render("error404");
+
     next();
 }
 

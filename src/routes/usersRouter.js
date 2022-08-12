@@ -13,9 +13,9 @@ const authMiddleware = require("../middlewares/authMiddleware");// En caso que q
 /********** Views **********/
 router.get("/", usersController.list); //Nada, pendiente a definir
 router.get("/perfil/:id", usersController.account); //Vista perfil del usuario
-router.get("/login",guestMiddleware, usersController.login); //Formulario de login
+router.get("/login", validationsLogin, guestMiddleware, usersController.login); //Formulario de login
 router.post("/login", usersController.processLogin); //Procesa el ingreso de una cuenta
-router.get("/registrarse",guestMiddleware, usersController.register); //Formulario de creación de cuenta
+router.get("/registrarse", guestMiddleware, usersController.register); //Formulario de creación de cuenta
 router.post("/registrarse", usersController.processRegister); //Procesa la creacion de una cuenta
 router.get("/editar/:id", usersController.edit); //Formulario de modificacion de usuario
 router.post("/editar/:id", usersController.upDate); //Procesa la modificacion de usuario
