@@ -153,6 +153,7 @@ svg {
   border-top: 1px solid #e5e5e5;
   bottom: 0cm;
   overflow: hidden;
+  font-family: 'Roboto', Courier, monospace !important;
 }
 
 .footer > * {
@@ -205,29 +206,30 @@ svg {
 /* -------------- SEARCH BUTTON ------------------------ */
 
 form, input, .caret {
-	margin: auto;
+	/* margin: auto; */
 }
 form {
-	position: relative;
-	width: 100%;
-	max-width: 17em;
+	/* position: relative; */
+	/* width: 100%; */
+  margin-right: 10px;
+	/* max-width: 17em; */
 }
 input, .caret {
 	display: block;
 	transition: all calc(var(--dur) * 0.5) linear;
-  cursor: pointer;
 }
 input {
 	background: white;
 	border-radius: 50%;
 	box-shadow: 0 0 0 0.25em inset;
 	caret-color: var(--primary);
-	width: 2em;
-	height: 2em;
+	width: 20px ;
+	height: 20px;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
   border: solid 1px white;
+  cursor:pointer;
 }
 input:focus, input:valid {
 	background: white;
@@ -269,6 +271,7 @@ label {
 	transform: translate(0,-1em) rotate(-45deg) translate(0,0.875em);
 	transform-origin: 50% 0;
   border: solid 1px white;
+  cursor: pointer;
 }
 
 @keyframes showCaret {
@@ -423,9 +426,12 @@ label {
   left: 0 !important;
 }
 .menu__btn {
-  position: fixed;
-  top: 20px;
+  position: absolute;
+  top: 15px;
   left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 26px;
   height: 26px;
   cursor: pointer;
@@ -436,7 +442,7 @@ label {
 .menu__btn > span::after {
   display: block;
   position: absolute;
-  width: 100%;
+  width: 30px;
   height: 2px;
   background-color: #616161;
   transition-duration: .25s;
@@ -457,7 +463,7 @@ label {
   width: 300px;
   height: 100%;
   margin: 0;
-  padding: 80px 0;
+  padding: 40px 0;
   list-style: none;
   background-color: #ECEFF1;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
@@ -1610,6 +1616,7 @@ footer {
     background: #121a22;
     display: flex;
     flex-direction: column !important;
+    font-family: 'Courier New', Courier, monospace !important;
   }
   .title-contacto {
     width: 100%;
