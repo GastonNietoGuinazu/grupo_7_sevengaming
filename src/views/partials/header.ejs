@@ -31,12 +31,11 @@
             <a href="/usuarios/perfil/ <%= locals.usuarioLogueado.id %>"><p style="color:gold" >Hola <%= locals.usuarioLogueado.first_name %></p></a>
           </div>
           <% } else { %>
-            <div class="searchBox">
-              <input class="searchInput" type="text" name="" placeholder="Search">
-              <button class="searchButton" href="#">
-                <i class="fas fa-search"></i>
-              </button>
-            </div>
+            <form>
+              <label for="search">Search</label>
+              <input id="search" type="search" pattern=".*\S.*" required>
+              <span class="caret"></span>
+            </form>
             <a href="/usuarios/login"><i class="far fa-user-circle" style="
             color: white;
             margin-right: 10px;
