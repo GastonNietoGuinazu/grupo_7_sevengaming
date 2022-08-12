@@ -55,6 +55,11 @@ label {
   margin-left: 30px;
   margin-bottom: 70px;
 }
+.contenedor--crearProducto {
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    }
+
 .create--acount {
   gap: 4rem;
   display: flex;
@@ -77,6 +82,8 @@ label {
   font-size: 2rem;
   margin-top: 15px;
   margin-bottom: 15px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px !important;
 
   display: flex;
   margin-left: 60px;
