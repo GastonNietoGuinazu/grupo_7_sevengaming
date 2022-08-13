@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const db = require("../database/models");
-
+const { validationResult } = require("express-validator");
 
 const productsController = {
 
@@ -33,14 +33,24 @@ const productsController = {
     },
     // Creación - Method de store
     store: (req, res) => {
-        db.Productos.create({
-            name: req.body.username,
-            price: req.body.prc,
-            categoryId: req.body.categotria,
-            description: req.body.desripcion,
-            image: req.body.imagen1,
-        });
-        res.redirect("/productos/productsList");
+        let errors = validationResult (req);
+        if (errors.isEmpty()) {
+            db.Productos.create({
+                name: req.body.name,
+                price: req.body.price,
+                categoryId: req.body.categoryId,
+                description: req.body.description,
+            })
+            .then(() => {
+                res.redirect("/productos/productsList");
+            })
+            
+        } else {
+            res.render("crearProducto", {
+                errors: errors.mapped(), 
+                old: req.body 
+              });
+        }
     },
     // Edición del producto
     editProduct: (req, res) => {

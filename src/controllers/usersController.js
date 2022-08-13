@@ -18,7 +18,6 @@ const usersController = {
     if (errors.isEmpty()) {
 
       let ConfiEmail = req.body.email;
-
       db.Usuarios.findOne({
         where: {
           email: ConfiEmail

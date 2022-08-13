@@ -24,25 +24,46 @@
                 <div class="nombre--format">
                     <div class="nombre--distribucion">
                         <label for="username">Nombre del Producto</label><br>
-                        <input type="text" id="username" name="username"><br>
+                        <input type="text" id="username" name="name"><br>
+                        <% if (locals.errors && errors.name) { %>
+                            <div class="invalid-text">
+                                <%= errors.name.msg %>
+                            </div>
+                        <% } %>
                     </div>
                     <div class="nombre--distribucion">
                         <label for="pwd">Descripción</label><br>
-                        <textarea rows="15" cols="60" name="desripcion"
+                        <textarea rows="15" cols="60" name="description"
                             placeholder="Ingrese descripción del producto..."></textarea><br>
+                         <% if (locals.errors && errors.description) { %>
+                            <div class="invalid-text">
+                                <%= errors.description.msg %>
+                            </div>
+                        <% } %>
                         <!-- <label>agregar imagen</label><br>//Logica planteada para agregar imagenes pero no funciona por un mal funcionamiento del enctype.
                         <input type="file" name='imagen1' /><br>
                         <input type="submit" name="subir-imagen" value="enviar imagen" /> -->
                     </div>
                 </div>
                 <label for="username">Categoría</label><br>
-                <select id="categoria" name="categotria"> <br>
+                <select id="categoria" name="categoryId"><br>
+                    <option value="" selected disabled>Seleccione una opción</option>
                     <option value="1">Juegos</option>
                     <option value="2">Libros</option>
                     <option value="3">Accesorios</option>
                 </select><br>
+                <% if (locals.errors && errors.categoryId) { %>
+                    <div class="invalid-text">
+                        <%= errors.categoryId.msg %>
+                    </div>
+                <% } %>
                 <label for="precio">Precio</label><br>
-                <input type="price" id="prc" name="prc">
+                <input type="price" id="prc" name="price">
+                <% if (locals.errors && errors.price) { %>
+                    <div class="invalid-text">
+                        <%= errors.price.msg %>
+                    </div>
+                <% } %>
                 <div class="cards-container">
                     <button class="boton-agregarProducto" type="submit">Agregar</button>
                     <div class="data"></div>
