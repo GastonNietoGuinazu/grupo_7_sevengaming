@@ -15,4 +15,9 @@
     border-style:double;
     padding: 2px 2px 2px 2px;
     border-style: solid;
+    text-align: center;
+}
+
+.boton-agregarProducto:hover {
+    background-color: lightblue;
 }

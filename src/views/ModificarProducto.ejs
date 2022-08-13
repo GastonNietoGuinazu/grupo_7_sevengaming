@@ -16,8 +16,9 @@
 <body>
     <!-- Header -->
     <%- include('partials/header') %>
-        <main class="main__distribution">
-            <h1 class="title--format">Editar el producto:  <%= product.name %></h1>
+    <main class="main__distribution">
+        <h1 class="title--format">EDITAR EL PRODUCTO:  <%= product.name %></h1>
+        <div class="contenedor-editarProducto">    
             <form action="/productos/edit/<%= product.id %>" method="post" class="form--format">
                 <div class="nombre--format">
                     <!-- <div class="nombre--distribucion">
@@ -69,6 +70,7 @@
                 </div>
             </form>
         </main>
+    </div>
         <!-- Footer -->
         <%- include('partials/footer') %>
 </body>

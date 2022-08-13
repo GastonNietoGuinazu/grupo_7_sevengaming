@@ -69,3 +69,11 @@ max-height: 100%;
     box-shadow: inset 350px 0 0 0 #AED6F1;
   color: white;
 }
+
+.contenedor-editarProducto {
+    padding: 5px 5px 5px 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
