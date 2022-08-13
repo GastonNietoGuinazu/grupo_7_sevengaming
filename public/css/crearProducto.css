@@ -1,6 +1,7 @@
 .contenedor-crearProducto {
     box-shadow: rgb(14 30 37 / 12%) 0px 2px 4px 0px, rgb(14 30 37 / 32%) 0px 2px 16px 0px;
     padding: 10px 10px 10px 10px;
+    margin-bottom: 10px;
 }
 
 .titulo-agregarProducto {
