@@ -20,25 +20,26 @@
                 <form class="form-container" action="/usuarios/registrarse" method="post">
                     <div class="name-container">
                         <label class="label-name" for="nombre">Nombre</label>
-                        <input class="input-name" type="text" name="first_name" id="" placeholder="Nombre">
-                        <% if (locals.errors && errors.nombre) { %>
-                            <div class="invalid-text">
-                                <%= errors.nombre.msg %>
-                            </div>
-                            <% } %>
+                        <input class="input-name" type="text" name="first_name" id="" placeholder="Nombre" 
+                        value="<%= locals.old && old.first_name ? old.first_name : "" %>">
+                        <% if (locals.errors && errors.first_name) { %>
+                            <div class="invalid-text"><%= errors.first_name.msg %></div>
+                        <% } %>
                     </div>
                     <div class="name-container">
                         <label class="label-name" for="apellido">Apellido</label>
-                        <input class="input-name" type="text" name="last_name" id="" placeholder="Apellido">
-                        <% if (locals.errors && errors.apellido) { %>
+                        <input class="input-name" type="text" name="last_name" id="" placeholder="Apellido" 
+                        value="<%= locals.old && old.last_name ? old.last_name : "" %>">
+                        <% if (locals.errors && errors.last_name) { %>
                             <div class="invalid-text">
-                                <%= errors.apellido.msg %>
+                                <%= errors.last_name.msg %>
                             </div>
                             <% } %>
                     </div>
                     <div class="name-container">
                         <label class="label-name" for="email">Email</label>
-                        <input class="input-name" type="email" name="email" id="" placeholder="Email">
+                        <input class="input-name" type="email" name="email" id="" placeholder="Email" 
+                        value="<%= locals.old && old.email ? old.email : "" %>">
                         <% if (locals.errors && errors.email) { %>
                             <div class="invalid-text">
                                 <%= errors.email.msg %>
@@ -48,18 +49,24 @@
                     <div class="name-container">
                         <label class="label-name" for="contraseña">Contraseña</label>
                         <input class="input-name" type="password" name="password" id="" placeholder="Contraseña">
-                        <% if (locals.errors && errors.contraseña) { %>
+                        <% if (locals.errors && errors.password) { %>
                             <div class="invalid-text">
-                                <%= errors.contraseña.msg %>
+                                <%= errors.password.msg %>
                             </div>
                             <% } %>
                     </div>
                     <div class="name-container">
                         <label class="label-name" for="nombre">Categoria</label>
                         <select class="input-name" id="categoria" name="categoryId">
-                            <option value="1">Administrador</option>
-                            <option value="2">Cliente</option>
+                            <option value="">Seleccione una opción</option>
+                            <option value="1" <%= locals.old && old.categoryId === "1" ? "selected" : "" %>>Administrador</option>
+                            <option value="2" <%= locals.old && old.categoryId === "2" ? "selected" : "" %>>Cliente</option>
                         </select>
+                        <% if (locals.errors && errors.categoryId) { %>
+                            <div class="invalid-text">
+                                <%= errors.categoryId.msg %>
+                            </div>
+                            <% } %>
                     </div>
                     <!-- <div class="name-container">//Logica planteada para agregar imagenes pero no funciona por un mal funcionamiento del enctype.
                         <label class="label-name" for="contraseña2">Imagen</label>

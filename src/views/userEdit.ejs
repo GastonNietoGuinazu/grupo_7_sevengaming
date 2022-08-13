@@ -21,14 +21,29 @@
                 <div>
                     <label for="username">Modificar Nombre</label>
                     <input type="text" id="username" name="first_name" value="<%= user.first_name %>">
+                    <% if (locals.errors && errors.first_name) { %>
+                        <div class="invalid-text">
+                            <%= errors.first_name.msg %>
+                        </div>
+                    <% } %>
                 </div>
                 <div>
                     <label for="precio">Modificar Apellido</label>
                     <input type="text" id="prc" name="last_name" value="<%= user.last_name %>">
+                    <% if (locals.errors && errors.last_name) { %>
+                        <div class="invalid-text">
+                            <%= errors.last_name.msg %>
+                        </div>
+                    <% } %>
                 </div>
                 <div>
                     <label for="precio">Modificar Email</label>
                     <input type="text" id="prc" name="email" value="<%= user.email %>">
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="invalid-text">
+                            <%= errors.email.msg %>
+                        </div>
+                    <% } %>
                 </div>
                 <!-- <div>
                     <label for="precio">Modificar Contraseña</label>

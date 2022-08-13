@@ -3,7 +3,7 @@ const app = express();
 const path = require("path");
 const methodOverride = require("method-override");
 const session = require('express-session'); // Instalando express-session
-const error404 = require("./middlewares/error");
+const error404 = require("./middlewares/error404");
 const cookies = require("cookie-parser");
 const userLoggedMidleware = require("./middlewares/userLoggedMiddleware");
 
