@@ -1,0 +1,18 @@
+.contenedor-crearProducto {
+    box-shadow: rgb(14 30 37 / 12%) 0px 2px 4px 0px, rgb(14 30 37 / 32%) 0px 2px 16px 0px;
+    padding: 10px 10px 10px 10px;
+}
+
+.titulo-agregarProducto {
+    text-align: center;
+    /* text-shadow: 1px 1px 1px black; */
+}
+
+.boton-agregarProducto {
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 3px;
+    border-style:double;
+    padding: 2px 2px 2px 2px;
+    border-style: solid;
+}

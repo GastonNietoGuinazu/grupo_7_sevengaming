@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/producto.css" />
     <link rel="stylesheet" href="/css/listaProductos.css" />
+    <link rel="stylesheet" href="/css/crearProducto.css" />
     <title>Seven Gaming</title>
 </head>
 
@@ -17,7 +18,7 @@
     <%- include('partials/header') %>
     <div class="container-prueba">
         <main class="main__distribution">
-            <h1 class="title--format">Agregar Producto </h1>
+            <h1 class="titulo-agregarProducto">AGREGAR PRODUCTO </h1>
             <div class="contenedor-crearProducto">
                 <form action="/productos/crearProducto" method="post" class="form--format">
                 <div class="nombre--format">
@@ -43,7 +44,7 @@
                 <label for="precio">Precio</label><br>
                 <input type="price" id="prc" name="prc">
                 <div class="cards-container">
-                    <button class="botom--format" type="submit">Agregar</button>
+                    <button class="boton-agregarProducto" type="submit">Agregar</button>
                     <div class="data"></div>
                 </div>
             </form>
