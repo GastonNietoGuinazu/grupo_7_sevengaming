@@ -468,6 +468,7 @@ position: fixed;
   background-color: rgb(251, 251, 251);
   box-shadow: 2px 2px 6px rgba(251, 251, 251, 0.4);
   transition-duration: .25s;
+  z-index: 20;
 
 }
 .menu__item {
