@@ -58,7 +58,7 @@
                     <div class="name-container">
                         <label class="label-name" for="nombre">Categoria</label>
                         <select class="input-name" id="categoria" name="categoryId">
-                            <option value="">Seleccione una opción</option>
+                            <option value="" seleceted>Seleccione una opción</option>
                             <option value="1" <%= locals.old && old.categoryId === "1" ? "selected" : "" %>>Administrador</option>
                             <option value="2" <%= locals.old && old.categoryId === "2" ? "selected" : "" %>>Cliente</option>
                         </select>
@@ -101,6 +101,7 @@
         </main>
     <!-- Footer -->
     <%- include('partials/footer') %>
+    <script src="/public/js/register.js"></script>
 </body>
 
 </html>

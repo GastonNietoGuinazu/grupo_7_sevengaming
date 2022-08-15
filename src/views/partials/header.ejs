@@ -17,8 +17,11 @@
             <% if (locals.isLogged && locals.usuarioLogueado.categoryId == 1) { %>
               <li><a class="menu__item" href="/productos/productsList">Lista de Productos</a></li>
               <li><a class="menu__item" href="/productos/crearProducto">Crear Productos</a></li>
-              <li><a class="menu__item" href="/usuarios/logout">Cerrar Sesión</a></li>
             <% } %>
+            <% if (locals.isLogged) { %>
+              <li><a class="menu__item" href="/usuarios/perfil/ <%= locals.usuarioLogueado.id %>">Perfil</a></li>
+              <li><a class="menu__item" href="/usuarios/logout">Cerrar Sesión</a></li>
+            <% } %> 
           </ul>
         </div>
       </div>
