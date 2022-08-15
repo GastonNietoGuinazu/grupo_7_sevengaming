@@ -21,7 +21,13 @@
         <div class="container-prueba">
             <h1><%= product.name %></h1><br>
                 <p>Precio: $<%= product.price %></p>
-                <p>Categoría: <%= product.categoryId %></p>
+                <% if (product.categoryId == 1) { %>
+                    <p>Categoría: Juegos</p>
+                <% } else if (product.categoryId == 2) { %>
+                    <p>Categoría: Libros</p>
+                <% } else { %>
+                    <p>Categoría: Accesorios</p>
+                <% } %>
                 <p>Descripción: <%= product.description %></p>
                 <div class="cards-container">
                     <a href="/productos/editarProducto/<%= product.id%>"><button class="botom--format" type="button">Editar Producto</button></a>
