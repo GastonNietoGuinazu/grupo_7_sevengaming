@@ -20,6 +20,9 @@ html {
 *, *:before, *:after {
   box-sizing: border-box;
 }
+.invalid-text {
+  color: red
+};
 
 html {
   font-size: 100%;
@@ -205,9 +208,9 @@ svg {
 
 /* -------------- SEARCH BUTTON ------------------------ */
 
-.boton-busqueda, .barra-busqueda, .caret {
-	/* margin: auto; */
-}
+/* .boton-busqueda, .barra-busqueda, .caret {
+	 margin: auto; 
+} */
 .boton-busqueda {
 	/* position: relative; */
 	/* width: 100%; */
