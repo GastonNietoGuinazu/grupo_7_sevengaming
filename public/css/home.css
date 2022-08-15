@@ -46,12 +46,14 @@ body {
 }
 .container-carousel {
   height: 350px;
-  width: 100%;
+  width: 70%;
   bottom: 20px;
   left: 100px;
   display: flex;
   justify-content: center;
   margin-bottom: 10px;
+  position: relative;
+  margin-top: 30px;
 
 }
 
@@ -67,7 +69,6 @@ body {
   position: relative;
   left: 0px;
   margin-top: 10px;
-  z-index: 1;
 }
 
 /* .card:not(:first-child) {
@@ -103,7 +104,7 @@ body {
 
 .emptybar {
   background-color: #2e3033;
-  width: 100%;
+  width: 10%;
   height: 100%;
 }
 
@@ -429,7 +430,7 @@ barra-busqueda::-webkit-search-decoration {
   left: 0 !important;
 }
 .menu__btn {
-  position: absolute;
+  position: fixed;
   top: 15px;
   left: 20px;
   display: flex;
@@ -460,17 +461,17 @@ barra-busqueda::-webkit-search-decoration {
 }
 .menu__box {
   display: block;
-  position: fixed;
-  top: 0;
+position: fixed;
   left: -100%;
   width: 300px;
   height: 100%;
   margin: 0;
   padding: 40px 0;
   list-style: none;
-  background-color: #ECEFF1;
-  box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+  background-color: rgb(251, 251, 251);
+  box-shadow: 2px 2px 6px rgba(251, 251, 251, 0.4);
   transition-duration: .25s;
+
 }
 .menu__item {
   display: block;
@@ -654,7 +655,7 @@ footer {
 }
 
 .categorias {
-  height: 752px;
+  height: 652px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -834,7 +835,10 @@ footer {
     font-weight: 200;
   }
   .container {
+    width: 100vw;
     height: 100%;
+    position: relative;
+    z-index: 10;
   }
 
   .navBar {
@@ -934,14 +938,13 @@ footer {
   }
 
   .ofertas {
-    height: 750px;
+    height: 1050px;
     background: #121a22;
     padding: 29px 31px 23px 31px;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    overflow: hidden;
   }
 
   .title-container {
@@ -966,7 +969,6 @@ footer {
     grid-template-columns: auto auto;
     column-gap: 20px;
     row-gap: 133px;
-    padding: 10px;
   }
 
   .card {
@@ -1003,9 +1005,7 @@ footer {
     margin-bottom: 55px;
   }
 
-  .categorias {
-    height: 752px;
-  }
+
 
   .categorias-title {
     font-family: "Roboto";
@@ -1032,6 +1032,7 @@ footer {
     height: 153px;
     display: flex;
     flex-direction: column;
+    padding: 20px;
   }
   .texto2 {
     font-family: "Roboto";
@@ -1133,6 +1134,8 @@ footer {
   .container {
     width: 100vw;
     height: 100%;
+    position: relative;
+    z-index: 10;
   }
 
   .navBar {
@@ -1152,6 +1155,7 @@ footer {
     display: flex;
     align-items: center;
     padding-left: 5px;
+    position:fixed;
   }
 
   .icon-menu {
@@ -1232,7 +1236,7 @@ footer {
   }
 
   .ofertas {
-    height: 750px;
+    height: 1050px;
     background: #121a22;
     padding: 29px 31px 23px 31px;
     display: flex;
@@ -1258,8 +1262,9 @@ footer {
   }
 
   .cards-container {
+    position:relative;
     max-width: 100%;
-    height: fit-content;
+    height: 1050px;
     display: grid;
     grid-template-columns: auto auto;
     column-gap: 20px;
@@ -1541,7 +1546,7 @@ footer {
 
   .cards-container {
     max-width: 100%;
-    height: fit-content;
+    height: 1050;
     display: grid;
     grid-template-columns: auto auto;
     column-gap: 20px;
@@ -1553,7 +1558,7 @@ footer {
     width: 153px;
     height: 153px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .precio1 {
