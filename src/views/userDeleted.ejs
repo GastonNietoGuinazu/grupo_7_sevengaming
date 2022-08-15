@@ -19,7 +19,7 @@
     <!-- Header -->
     <%- include('partials/header') %>
         <div class="container-prueba">
-            <h1>Estas seguro de querer eliminar tu cuenta: <%= user.first_name %> ???</h1>
+            <h1>¿Estás seguro de querer eliminar tu cuenta: <%= user.first_name %>?</h1>
             <div class="cards-container">
                 <a href="/usuarios/perfil/<%= user.id %>"><button class="botom--format" type="button">Volver a Perfil</button></a>
                 <form action="/usuarios/eliminar/<%= user.id %>" method="POST">
