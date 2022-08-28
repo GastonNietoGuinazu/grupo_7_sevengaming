@@ -19,12 +19,14 @@ app.use(userLoggedMidleware); //Middleware de aplicación
 
 /********** Routers importados **********/
 
-const productsRouter = require("./routes/productsRouter.js")
-const usersRouter = require("./routes/usersRouter.js")
-const homeRouter = require("./routes/homeRouter.js");
+const productsRouter = require("./routes/productsRouter");
+const usersRouter = require("./routes/usersRouter");
+const homeRouter = require("./routes/homeRouter");
+const apiRouter = require("./routes/apiRouter");
 
 app.use("/productos", productsRouter);
 app.use("/usuarios", usersRouter);
+app.use("/API", apiRouter);
 app.use("/", homeRouter);
 app.use(error404);
 
