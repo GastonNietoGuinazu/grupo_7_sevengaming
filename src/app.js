@@ -22,11 +22,13 @@ app.use(userLoggedMidleware); //Middleware de aplicación
 const productsRouter = require("./routes/productsRouter");
 const usersRouter = require("./routes/usersRouter");
 const homeRouter = require("./routes/homeRouter");
-const apiRouter = require("./routes/apiRouter");
+const apiProductsRouter = require("./routes/api/productsRouter");
+const apiUsersRouter = require("./routes/api/usersRouter");
 
 app.use("/productos", productsRouter);
 app.use("/usuarios", usersRouter);
-app.use("/API", apiRouter);
+app.use("/API/productos", apiProductsRouter);
+app.use("/API/usuarios", apiUsersRouter);
 app.use("/", homeRouter);
 app.use(error404);
 

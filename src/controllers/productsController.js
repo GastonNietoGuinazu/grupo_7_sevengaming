@@ -50,7 +50,7 @@ const productsController = {
                 errors: errors.mapped(), 
                 old: req.body 
               });
-        }
+        } 
     },
     // Edición del producto
     editProduct: (req, res) => {
